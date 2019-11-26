@@ -10,9 +10,9 @@ Vue实例
 
 
 生命周期钩子函数：8个
-    beforeCreate(),created(),
-    beforeMount(),mounted(),
-    beforeUpdate(),updated(),
+    beforeCreate(),new Vue后触发  created()，获得data数据
+    beforeMount(),mounted(),data数据已经输出到html页面
+    beforeUpdate(),不能更改数据 updated(),
     beforeDestroy(),destroyed()
 
     created():可以独取data的数据,最早可以发送ajax请求的阶段
@@ -61,3 +61,26 @@ template
     evt.target：当前点击的DOM对象
     事件修饰符：
         stop:阻止向上传播
+        parvent:
+        capture:
+
+表单处理
+    v-model：数据的双向绑定
+        修饰符：v-model.number：类型转为数值型
+                v-model.trim:去掉前后空格
+                v-model.lazy:表单输入完执行
+    value+on:change实现v-model
+
+
+组件：
+    全局组件，局部组件
+    组件必须有一个外包裹,
+    组件名使用xx-xx，
+    组件的data必须 是一个函数方法
+    组件的创建写在new Vue实例化前面
+    组件传值：1.props 2.emit
+    实例化的数据传递到组件：v-bind
+    组件数据传递到实例化data：$emit()
+
+    定义插槽：slot,分发内容
+    html内联样式的优先级大于组件的样式

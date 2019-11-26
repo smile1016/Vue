@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{rootcounter}}</h1>
+        <gp-counter v-on:counterchange='change'></gp-counter>
+    </div>
+
+    <script type="text/template" id="counterTemp">
+        <div>
+            <button @click='decrement'>-</button>
+            {{counter}}
+            <button @click='increment'>+</button>
+        </div>
+    </script>
+
+    <script>
+        Vue.component('gpCounter', {
+            template: '#counterTemp',
+            data: function () {
+                return {
+                    counter: 0
+                }
+            },
+            methods: {
+                increment() {
+                    this.counter++;
+                    //$emit的第一个参数时间名，和html里名字相同，第二个参数是组件的数据
+                    this.$emit('counterchange',this.counter)
+                },
+                decrement() {
+                    this.counter--;
+                    this.$emit('counterchange',this.counter)
+                }
+            }
+        })
+        var vm = new Vue({
+            el: '#app',
+            data:{
+                rootcounter:0
+            },
+            methods:{
+                change(val){
+                    this.rootcounter = val
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div :class="{box:isbox,active:isactive}">gp16</div>
+        <div :class="[boxstyle,activestyle]">gp16</div>
+
+        <div :style="{color:color,'font-size':fontsize}">hello</div>
+        <div :style="objstyle">hello</div>
+    </div>
+
+    <script>
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                isbox:false,
+                isactive:true,
+                boxstyle:'box',
+                activestyle:'active',
+                color:'red',
+                fontsize:'30px',
+                objstyle:{
+                    color:'yellow',
+                    'font-size':'40px'
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -10,20 +10,31 @@
 </head>
 
 <body>
-    
     <div id="app">
-        <ul>
-            <li v-for='c in cities'>{{c}}</li>
-        </ul>
+        <comp-a :user='username'></comp-a>
+       
     </div>
 
     <script>
-        var cities = ['北京', '天津', '上海']
-
+        const compb = {
+            props:['user'],
+            template:'<h1>gp16-1-{{user}}</h1>'
+        }
+        const compa =  {
+            props:['user'],
+            template:'<h1>gp16 <compb  :user="user"></compb></h1>',
+            components:{
+                compb
+            }
+        }
+        
         var vm = new Vue({
             el: '#app', //vue实例挂载的DOM
             data: {
-                cities:cities
+                username:'xiaoming'
+            },
+            components:{
+                compA:compa
             }
         })
     </script>

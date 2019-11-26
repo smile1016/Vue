@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- <gp-16 v-bind:mytitle="title" :userinfo='user' :cities="[1,2,3,4]"></gp-16> -->
+        <!-- v-for循环组件的数据 -->
+        
+        <gp-16-1 v-for="user in list" :userinfo='user'></gp-16-1>
+       
+    </div>
+
+  
+
+    <script>
+        // Vue.component('gp-16',{
+        //     props:['mytitle','userinfo','cities'],//显式定义
+        //     template:`
+        //     <div>{{mytitle}}
+        //         <h1>{{userinfo.username}}</h1>
+        //         <h1>{{userinfo.age}}</h1>
+        //         <ul>
+        //             <li v-for='i in cities'>{{i}}</li>
+        //         </ul>
+        //     </div>`,//可以写字符串或者模板字符串
+        // })
+        Vue.component('gp-16-1',{
+            props:['mytitle','userinfo','cities'],//显式定义
+            template:`
+            <div>
+                <h1>{{userinfo.username}}</h1>
+                <h1>{{userinfo.age}}</h1>
+                <ul>
+                    <li v-for='i in cities'>{{i}}</li>
+                </ul>
+            </div>`,//可以写字符串或者模板字符串
+        })
+
+      
+        var vm = new Vue({
+            el:'#app',
+           data:{
+               title:'title',
+               list:[{username:'xiaoming',age:16},{username:'xiaoxiao',age:12}],
+               user:{
+                   username:'xiaoming',
+                   age:18
+               }
+           }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- <gp-16></gp-16>
+        <gp-16></gp-16>
+        <gp-16></gp-16>
+        <gp-16></gp-16>
+        <gp-16></gp-16> -->
+        <gp-counter></gp-counter>
+        <gp-counter></gp-counter>
+    </div>
+
+    <script type="text/template" id="counterTemp">
+        <div>
+            <button @click='decrement'>-</button>
+            {{counter}}
+            <button @click='increment'>+</button>
+        </div>
+    </script>
+
+    <script>
+        Vue.component('gp-16',{
+            template:`<div><h1>gp16</h1><h1>gp16</h1></div>`,//可以写字符串或者模板字符串
+        })
+
+        Vue.component('gpCounter',{
+            template:'#counterTemp',
+            data:function(){
+                return {counter:0}
+            },
+            methods:{
+                increment(){this.counter++},
+                decrement(){this.counter--}
+            }
+        })
+        var vm = new Vue({
+            el:'#app',
+           
+        })
+    </script>
+</body>
+</html>

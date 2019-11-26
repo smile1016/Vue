@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <comp-a :user='username'></comp-a>
+       
+    </div>
+
+    <script>
+        const compb = {
+            props:['user'],
+            template:'<h1>gp16-1-{{user}}</h1>',
+            beforeCreate(){
+                console.log('from compb beforeCreate')
+            },
+            created(){
+                console.log('from compb created')
+            },
+            mounted(){
+                console.log('from compb mounted')
+            },
+            updated(){
+                console.log('from compb updated')
+            }
+        }
+        const compa =  {
+            props:['user'],
+            template:'<h1>gp16 <compb  :user="user"></compb></h1>',
+            components:{
+                compb
+            },
+            beforeCreate(){
+                console.log('from compa beforeCreate')
+            },
+            created(){
+                console.log('from compa created')
+            },
+            mounted(){
+                console.log('from compa mounted')
+            },
+            updated(){
+                console.log('from compa updated')
+            }
+        }
+        
+        var vm = new Vue({
+            el: '#app', //vue实例挂载的DOM
+            data: {
+                username:'xiaoming'
+            },
+            components:{
+                compA:compa
+            },
+            beforeCreate(){
+                console.log('from root beforeCreate')
+            },
+            created(){
+                console.log('from root created')
+            },
+            mounted(){
+                console.log('from root mounted')
+            },
+            updated(){
+                console.log('from root updated')
+            }
+        })
+    </script>
+</body>
+
+</html>

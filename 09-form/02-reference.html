@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- <input type="text" v-bind:value='username' v-on:input="username=$event.target.value"> -->
+        <input type="text" v-bind:value='username' v-on:change="username=$event.target.value">
+        <!-- <input type="text" v-model.lazy='username'> -->
+        <span>{{username}}</span>
+
+        <input type="text" v-model.number="age">
+        <input type="text" v-model.trim="trimvalue">
+    </div>
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                username:'',
+                age:'18',
+                trimvalue:''
+            }
+        })
+    </script>
+</body>
+</html>

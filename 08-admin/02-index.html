@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .pages ul li {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+        }
+
+        /* dialog */
+        .mask {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            background: rgba(138, 137, 137, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dialog {
+            flex-basis: 300px;
+            height: 300px;
+            width: 280px;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+        }
+
+        .dialog .header {
+            display: flex;
+        }
+
+        .dialog .header h3 {
+            margin: 0;
+            flex: 1;
+        }
+
+        .dialog .header span {
+            flex-basis: 50px;
+        }
+        .dialog input{
+            width: 70%;
+            margin: 10px;
+            display: inline-block;
+        }
+        .btn{
+            width: 50%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <table>
+            <tr>
+                <th>logo</th>
+                <th>公司名称</th>
+                <th style="width: 100px;">城市</th>
+                <th>职位名称</th>
+                <th style="width: 100px"><span>薪水</span><span class="sort sorting_sort"></span></th>
+                <th style="width: 100px">时间</th>
+                <th style="width: 120px">操作</th>
+            </tr>
+            <tr v-for='item in list'>
+                <td>
+                    <img style="width: 90px;height: 90px;" :src="'http://localhost:3000/upload/'+item.companyLogo"
+                        alt="">
+                </td>
+                <td>{{item.companyName}}</td>
+                <td>{{item.city}}</td>
+                <td>{{item.positionName}}</td>
+                <td>{{item.salary}}</td>
+                <td>{{item.createTime}}</td>
+                <td>
+                    <button @click="update(item)">编辑</button>
+                    <button @click='del(item._id)'>删除</button>
+                </td>               
+
+            </tr>
+        </table>
+        <div class="pages">
+            <ul>
+                <li v-for='n in pages' @click="gopages(n)">{{n}}</li>
+            </ul>
+        </div>
+        <common-dialog title="编辑" :item="position" v-if="isShowEdit" @close="isShowEdit=false">
+            公司名称:<input type="text" class="form-control" v-model='position.companyName'>
+
+            城市:<input type="text" class="form-control" v-model='position.city'><br>
+            职位名称:<input type="text" class="form-control" v-model='position.positionName'><br>
+            薪水:<input type="text" class="form-control" v-model='position.salary'><br>
+            <button @click="handleSubmit()" type="button" class="btn btn-large btn-block btn-success">submit</button>
+        </common-dialog>
+    </div>
+
+    <script type="text/template" id="temp-dialog">
+        <div class='mask'>
+            <div class="dialog">
+                <div class="header">
+                    <h3>{{title}}</h3>
+                    <span @click="handleClose"><img src="./关闭.png" alt=""></span>
+                </div>
+
+                <slot></slot>
+            </div>
+        </div>
+    </script>
+    <script>
+        Vue.component('common-dialog', {
+            props: ['title', 'item'],
+            template: '#temp-dialog',
+            methods: {
+                handleClose() {
+                    this.$emit('close')
+                }
+            }
+        })
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                keyword: '',
+                pagesize: 1,
+                sortname: 'salary',
+                sort: 'asc',
+                list: [],
+                total: 0,
+                isShowEdit: false,
+                position: {
+
+                },
+                updateid: ''
+            },
+            computed: {
+                pages() {
+                    return Math.ceil(this.total / 10)
+                }
+            },
+            created() {
+                // 请求数据
+                fetch('./data.json').then((res) => res.json()).then((result) => {
+                    console.log(result)
+                    this.list = result.data
+                    this.total = result.total
+                })
+            },
+            methods: {
+                // 删除
+                del(id) {
+                    console.log(id)
+                    this.list.forEach((item, index) => {
+                        if (item._id === id) {
+                            this.list.splice(index, 1)
+                        }
+                    })
+                },
+                // 分页
+                gopages(pageno) {
+                    location.hash =
+                        `/position/index?pagesize=${this.pagesize}&pageno=${pageno}&keyword=${this.keyword}&sortname=${this.sortname}&sort=${this.sort}`
+                },
+                //编辑
+                update(item) {
+                    this.position = Object.assign({}, item);
+                    this.isShowEdit = true;
+                },
+                handleSubmit() {
+                    let id = this.position._id
+                    this.list.forEach((item, index) => {
+                        if (item._id === id) {
+                            vm.$set(vm.list, index, this.position);
+                            this.isShowEdit=false;
+                        }
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
