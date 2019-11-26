@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+    <style>
+        .A{
+            width: 300px;
+            height: 300px;
+            background: orange;
+        }
+        .B{
+            width: 200px;
+            height: 200px;
+            background: pink;
+        }
+        .C{
+            width: 100px;
+            height: 100px;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+      <div class="A" @click.capture='clickA'>
+          A
+          <div class="B"  @click.capture='clickB'>
+              B
+              <div class="C"  @click.capture='clickC'>
+                  C
+              </div>
+          </div>
+      </div>
+      <a @click.prevent href="http://baidu.com">link</a>
+      <button @click.once='handleClick'>click</button>
+    </div>
+    <script>
+        var am = new Vue({
+            el:'#app',
+            data:{
+                count:0
+            },
+            methods:{
+                clickA(){
+                    console.log('A')
+                },
+                clickB(){
+                    console.log('B')
+                },
+                clickC(){
+                    console.log('C')
+                },
+                handleClick(){
+                    console.log('handleClick')
+                }
+            }
+        })
+    </script>
+</body>
+</html>

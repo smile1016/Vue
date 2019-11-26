@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <template v-if='type==="a"'>
+            username:<input key="username" type="text">
+        </template>
+        <template v-else>
+            password:<input key="password" type="text">
+        </template>
+        <button @click='toggle'>toggle</button>
+
+        <hr>
+
+        <ul>
+            <li v-for="item in  cities" v-if='item.id%2!==0'>{{item.name}}</li>
+        </ul>
+    </div>
+    <script>
+        var cities = [{name:'北京',id:1}, {name:'天津',id:2}, {name:'上海',id:3}]
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                cities,
+                type: 'a'
+            },
+            methods: {
+                toggle() {
+                    this.type = this.type === 'a' ? 'b' : 'a'
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

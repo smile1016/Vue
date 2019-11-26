@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{username}}-{{age}}
+    </div>
+
+    <script>
+        var user = {
+            username:'xiaoming',
+            age:18
+        }
+        // Object.freeze(user);//冻结，不支持响应式更新
+        var vm = new Vue({
+            el:'#app',//挂载的DOM元素
+            // data:{
+            //     message:'hello world'
+            // },//挂载展示的数据
+            data:user,//单独提取
+
+            //8个钩子函数，不要使用this
+            beforeCreate(){
+                console.log('beforeCreate');
+                console.log('username:',this.username);//未定义
+                console.log(document.querySelector('#app'))//取不到
+            },
+            created(){
+                console.log('created');
+                console.log('username:',this.username)//可以取到
+                console.log(document.querySelector('#app'))//取不到
+            },//最早可以发送ajax的阶段
+            beforeMount(){
+                console.log('beforeMount')
+                console.log('username:',this.username)//可以取到
+                console.log(document.querySelector('#app'))//取不到
+            },//原有DOM模板
+            mounted(){
+                console.log('mounted');
+                console.log('username:',this.username)//可以取到
+                console.log(document.querySelector('#app'))//可以取到
+                setTimeout(()=>{
+                    vm.$destroy()//销毁之后页面无法响应式更新
+                },3000)
+            },//数据渲染后的数据，最早可以操作DOM的阶段
+            beforeUpdate(){
+                console.log('beforeUpdate')
+            },//data修改被触发
+            updated(){
+                console.log('updated')
+            },//data修改被触发
+            beforeDestroy(){
+                console.log('beforeDestroy')
+            },
+            destroyed(){
+                console.log('destroyed')
+            }//销毁之后页面无法响应式更新
+
+        })
+        //vm.username===user.username   true,指向同一个内容
+
+        //$watch检测属性是否有改动
+        vm.$watch('username',function(newval,oldval){
+            console.log(newval,oldval)
+        })
+    </script>
+</body>
+</html>

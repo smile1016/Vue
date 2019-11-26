@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+    <style>
+        .pages ul li {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <table>
+            <tr>
+                <th>logo</th>
+                <th>公司名称</th>
+                <th style="width: 100px;">城市</th>
+                <th>职位名称</th>
+                <th style="width: 70px"><span>薪水</span><span class="sort sorting_sort"></span></th>
+                <th style="width: 100px">时间</th>
+                <th style="width: 120px">操作</th>
+            </tr>
+            <tr v-for='item in list'>
+                <td>
+                    <img style="width: 100px;height: 100px;" :src="'http://localhost:3000/upload/'+item.companyLogo"
+                        alt="">
+                </td>
+                <td>{{item.companyName}}</td>
+                <td>{{item.city}}</td>
+                <td>{{item.positionName}}</td>
+                <td>{{item.salary}}</td>
+                <td>{{item.createTime}}</td>
+                <td>
+                    <button>编辑</button>
+                    <button @click='del(item._id)'>删除</button>
+                </td>
+            </tr>
+        </table>
+        <div class="pages">
+            <ul>
+                <li v-for='n in pages'@click="gopages(n)">{{n}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                keyword: '',
+                pagesize: 1,
+                sortname: 'salary',
+                sort: 'asc',
+                list: [],
+                total: 0
+            },
+            computed: {
+                pages() {
+                    return Math.ceil(this.total / 10)
+                }
+            },
+            created() {
+                // 请求数据
+                fetch('./data.json').then((res) => res.json()).then((result) => {
+                    console.log(result)
+                    this.list = result.data
+                    this.total = result.total
+                })
+            },
+            methods: {
+                // 删除
+                del(id) {
+                    console.log(id)
+                    this.list.forEach((item, index) => {
+                        if (item._id === id) {
+                            this.list.splice(index, 1)
+                        }
+                    })
+                },
+                // 分页
+                gopages(pageno) {
+                    location.hash =
+                        `/position/index?pagesize=${this.pagesize}&pageno=${pageno}&keyword=${this.keyword}&sortname=${this.sortname}&sort=${this.sort}`
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

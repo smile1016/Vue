@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    
+    <div id="app">
+       
+        <ul>
+            <li v-for="(item,index) in cities" :key='index'>{{item.name}}--{{index}}</li>
+        </ul>
+       <hr>
+    </div>
+    <script>
+        var cities = [{name:'北京',id:1}, {name:'天津',id:2}, {name:'上海',id:3}]
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                cities,
+                type: 'a',
+                user:{
+                    username:'xiaoming',
+                    age:19,
+                    addresss:'beijing'
+                }
+            },
+            methods: {
+               
+            }
+        })
+    </script>
+</body>
+
+</html>

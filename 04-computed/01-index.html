@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        {{fullname}}
+        <hr>
+        {{getfullname()}}
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            computed: {
+                // fullname(){
+                //     console.log('computed')
+                //     return this.firstname+this.lastname
+                // }
+                fullname: {
+                    get() {
+                        console.log('computed')
+                        return this.firstname + this.lastname
+                    },
+                    set(val){
+                        this.firstname = val
+                    }
+                }
+            },
+            data: {
+                firstname: 'xiao',
+                lastname: 'ming'
+            },
+            methods: {
+                getfullname() {
+                    console.log('methods')
+                    return this.firstname + this.lastname
+                },
+                //检测属性是否有变化
+                watch: {
+                    firstname(newval, oldval) {
+                        console.log(newval, oldval)
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

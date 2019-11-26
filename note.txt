@@ -1,0 +1,63 @@
+Vue.js 
+    渐进式 JavaScript 框架
+    数据驱动视图，响应式（jq:命令式）
+
+Vue实例
+    var vm = new Vue({
+        el:'#app',
+        ……其他选项
+    })
+
+
+生命周期钩子函数：8个
+    beforeCreate(),created(),
+    beforeMount(),mounted(),
+    beforeUpdate(),updated(),
+    beforeDestroy(),destroyed()
+
+    created():可以独取data的数据,最早可以发送ajax请求的阶段
+    mounted():最早可以操作编译完的DOM对象 
+    updated:第一次挂载数据不会执行，后续数据更新会执行
+    distroy:销毁后 ，数据响应式会丢失
+
+
+template
+    v-once:只会展示一次data
+    v-html:渲染展示html,但是会有xss攻击，不要使用
+    v-bind：动态取值
+    js表达式只能用单个表达式
+
+    指令：
+        动态参数:[]
+        v-if:真=>渲染，假=>不渲染
+        v-if和v-show的区别：(show:false)
+            v-if:不会生成DOM
+            v-show:会生成，但是display为none
+
+    缩写：
+        v-on:事件  缩写@
+        v-bind 直接去掉就是缩写
+
+
+计算属性和侦听器
+    computed:会缓存
+    methods:不会缓存
+
+
+条件渲染
+    v-if v-else-if v-else
+    v-if和v-for一起使用的时候，v-for优先级更高
+
+
+列表渲染
+
+
+数组更新
+    不能通过下标更改数据，无法做到响应式
+    push(),pop(),shift(),unshift(),splice(),sort(),reserve()
+
+
+事件处理
+    evt.target：当前点击的DOM对象
+    事件修饰符：
+        stop:阻止向上传播

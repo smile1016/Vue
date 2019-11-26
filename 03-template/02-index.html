@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div v-if='show'>
+            gp16-1
+        </div>
+        <div v-show='show'>
+            gp16-2
+        </div>
+        <button v-on:[eventname]="change">show btn</button>
+        <hr>
+
+        <!-- 添加属性 -->
+        <div v-bind:[attrname]='href'>
+            gp16-3
+        </div>
+        <!-- 修饰符阻止事件 -->
+        <a href="http://www.baidu.com" v-on:click.prevent="handleClick">link</a>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            computed:{
+                attrname(){
+                    return 'data-'+this.dataid
+                }
+            },
+            data: {
+                show: false,
+                eventname:'click',
+                dataid:'img',
+                href:"http://www.baidu.com"
+            },
+            methods:{
+                //操作的函数必须放进methods
+                change(){
+                    this.show = !this.show
+                },
+                handleClick(){
+                    console.log('handleClick')
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

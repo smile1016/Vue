@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li v-for='c in list'>
+                <input type="text" v-model='c.quantity'>{{c.name}}
+            </li>
+        </ul>
+        <span>{{total}}</span>
+    </div>
+
+    <script>
+        var cities = ['北京', '天津', '上海']
+
+        var vm = new Vue({
+            el: '#app', //vue实例挂载的DOM
+            data: {
+                list:[]
+            },
+            computed:{
+
+            },
+            mounted(){
+                fetch('http://api.myjson.com/bins/1h8jht').then((res)=>
+                    res.json()).then((result)=>{
+                        console.log(result)
+                        this.list = result.product;
+                    })
+                    
+            }
+        })
+    </script>
+</body>
+
+</html>

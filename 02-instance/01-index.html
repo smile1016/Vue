@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{username}}-{{age}}
+    </div>
+
+    <script>
+        var user = {
+            username:'xiaoming',
+            age:18
+        }
+        // Object.freeze(user);//冻结，不支持响应式更新
+        var vm = new Vue({
+            el:'#app',//挂载的DOM元素
+            // data:{
+            //     message:'hello world'
+            // },//挂载展示的数据
+            data:user,//单独提取
+            myoptipns(){
+                console.log('myoptions')
+            }
+        })
+        //vm.username===user.username   true,指向同一个内容
+
+        //$watch检测属性是否有改动
+        vm.$watch('username',function(newval,oldval){
+            console.log(newval,oldval)
+        })
+    </script>
+</body>
+</html>
