@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{time | formatdate('yyyy') | prefix}}</h1>
+    </div>
+
+    <script>
+        //定义全局过滤器
+        Vue.filter('formatdate',function(value,type){
+            if(type==='yyyy'){
+                return value.split('-')[0]
+            }else{
+                return '今天是:'+value
+            }
+        }),
+
+        Vue.filter('prefix',function(val){
+            return "今天是："+val
+        })
+        // 调用
+        
+        var vm = new Vue({
+            el:'#app',
+           data:{
+                time:'2019-11-27'
+           },
+           computed:{
+               getyear(){
+
+               }
+           }
+        })
+    </script>
+</body>
+</html>

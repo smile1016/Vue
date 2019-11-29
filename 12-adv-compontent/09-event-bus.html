@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <comp-a :user='username'></comp-a>
+        <button @click="handleClick">send</button>
+    </div>
+
+    <script>
+        // eventBus 全局Vue传递数据
+        var eventbus = new Vue();
+        const compb = {
+            props: ['user'],
+            template: '<h1>gp16-1-{{user}}</h1>',
+            mounted() {
+                eventbus.$on('message', function (msg) {
+                    console.log(msg)
+                })
+            }
+
+        }
+        const compa = {
+            props: ['user'],
+            template: '<h1>gp16 <compb  :user="user"></compb></h1>',
+            components: {
+                compb
+            }
+        }
+
+        var vm = new Vue({
+            el: '#app', //vue实例挂载的DOM
+            data: {
+                username: 'xiaoming'
+            },
+            components: {
+                compA: compa
+            },
+            methods: {
+                handleClick() {
+                    eventbus.$emit('message', 'hello world')
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

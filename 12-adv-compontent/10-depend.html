@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <comp-a :user='username'></comp-a>
+        <button>send</button>
+    </div>
+
+    <script>
+        
+        const compb = {
+            props: ['user'],
+            template: '<h1>gp16-1-{{user}}</h1>',
+            //注入
+            inject:['username','message'],
+            mounted() {
+               console.log('username:',this.username)
+               console.log(this.message)
+            }
+
+        }
+        const compa = {
+            props: ['user'],
+            template: '<h1>gp16 <compb  :user="user"></compb></h1>',
+            components: {
+                compb
+            }
+        }
+
+        var vm = new Vue({
+            el: '#app', //vue实例挂载的DOM
+            data: {
+                username: 'xiaoming'
+            },
+            components: {
+                compA: compa
+            },
+            methods: {
+               getmessage(){
+                   return 'from root hello world'
+               }
+            },
+            // 提供属性
+            provide:function(){
+                    return {
+                        username:this.username,
+                        message:this.getmessage()
+                    }
+                }
+        })
+    </script>
+</body>
+
+</html>

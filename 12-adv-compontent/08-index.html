@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    
+    <div id="app">
+        <!-- 属性覆盖 -->
+        <custom-input type='text'></custom-input>
+    </div>
+
+    <script>
+        Vue.component('custom-input',{
+            inheritAttrs:false,//class并不会被去掉
+            template:`<input type="date">`
+        })
+        var vm = new Vue({
+            el: '#app', //vue实例挂载的DOM
+            data: {
+            }
+        })
+    </script>
+</body>
+
+</html>

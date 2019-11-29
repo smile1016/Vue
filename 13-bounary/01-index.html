@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <comp-a></comp-a>    
+    </div>
+
+    <script>
+        Vue.component ('comp-b',{
+            template:`<div></div>`,
+            data:function(){
+                return {
+                    name:'comp b name'
+                }
+            },
+            mounted(){
+                // 组件传值拿到根节点属性
+                console.log(this.$root.name);
+                console.log(this.$root.getusername());
+                // 子组件拿到父组件属性  
+                console.log(this.$parent.name);
+            }
+        })
+        Vue.component ('comp-a',{
+            template:`<div>
+                    <comp-b ref='compb'>
+                    </comp-b>
+                </div>`,
+            data:function(){
+                return {
+                    name:'comp a name'
+                }
+            },
+            mounted(){
+                // 父组件取子组件内容,子组件需要添加ref
+               console.log( this.$refs['compb'].name);
+               this.$refs.compb.name='update name'
+            }
+           
+        })
+        
+        var vm  = new Vue({
+            el:'#app',
+            data:{
+                name:'root'
+            },
+            methods:{
+                getusername(){
+                    return 'root getusername'
+                }
+            },
+            mounted(){
+                // this.$refs.input.focus()
+            }
+        })
+    </script>
+</body>
+</html>

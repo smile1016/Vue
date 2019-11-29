@@ -64,8 +64,8 @@ template
         parvent:
         capture:
 
-表单处理
-    v-model：数据的双向绑定
+表单输入绑定
+    v-model：数据的双向绑定，取实例化data里的数据
         修饰符：v-model.number：类型转为数值型
                 v-model.trim:去掉前后空格
                 v-model.lazy:表单输入完执行
@@ -84,3 +84,8 @@ template
 
     定义插槽：slot,分发内容
     html内联样式的优先级大于组件的样式
+
+    keep-alive
+        必须有名字
+    处理边界情况
+        

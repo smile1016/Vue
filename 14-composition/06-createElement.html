@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自定义渲染函数</title>
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            // 自定义渲染函数
+            //createElement 
+            render(createElement) {
+                return createElement('div', {
+                        class: 'box',
+                        attrs: {
+                            id: 'con'
+                        },
+                        on: {
+                            click() {
+                                console.log('11')
+                            }
+                        }
+                    },
+                    [
+                        'hello world',
+                        createElement('h1', {
+                            style: {
+                                color: 'pink'
+                            }
+                        }, ['hihihi'])
+                    ]
+                )
+            },
+            data: {
+
+            }
+        })
+    </script>
+</body>
+
+</html>

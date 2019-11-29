@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <compa :user="username"></compa>
+        <compc :fruit='apple'></compc>
+    </div>
+    <script>
+        // 局部组件的子组件
+        const compb ={
+            props:['user'],
+            template:'<p>hi,{{user}}</p>',
+            
+        }
+        //局部组件
+        const compa = {
+            props:['user'],
+            template:"<div>hello,{{user}}<compb :user='user'></compb></div>",
+            components:{
+                compb
+            }
+        }
+        //全局组件，props
+        Vue.component('compc',{
+            props:['fruit'],
+            template:'<div>{{fruit}}</div>'
+        })
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                username:'xiaoming',
+                apple:'apple'
+            },
+            components:{
+                compa
+            }
+        })
+    </script>
+</body>
+</html>

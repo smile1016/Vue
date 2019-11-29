@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <comp-a :propa='"s"' :propb='true' :propc='[1,2,3]' :propd='{name:"xiaoxiao",age:"10"}' :prope="getuser" :propf="fruits"></comp-a>
+    </div>
+    <script>
+          Vue.component ('comp-a',{
+            props:{
+                propa:String,
+                propb:{
+                    type:Boolean,
+                    required:true
+                },
+                propc:{
+                    type:Array,
+                    required:true
+                },
+                propd:{
+                    type:Object,
+                    required:true
+                },
+                prope:{
+                    type:Function,
+                    required:true
+                },
+                propf:{
+                    required:true,
+                    validator:function(value){
+                        if(value.indexOf('banana')>-1){
+                            return true
+                        }else{
+                            return false
+                        }
+                    }
+                },
+                proph:{
+                    default(){
+                        return 'gp16'
+                    }
+                }
+            },
+            template:`<div>
+                </div>`,
+            data:function(){
+                return {
+                    name:'comp a name'
+                }
+            },
+            
+        })
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                username:'cc',
+                fruits:['apple','orange']
+            },
+            methods:{
+                getuser(){
+
+                }
+            }
+        })
+    </script>
+</body>
+</html>

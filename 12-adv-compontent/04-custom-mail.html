@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    
+    <div id="app">
+        <!-- <input type="text" :value='username' @input ="username=$event.target.value">
+        <input type="text" v-model="username"> -->
+        <custom-mail v-model="mail"></custom-mail>
+        <!-- 组件实现v-model -->
+        {{mail}}
+    </div>
+
+    <script>
+        Vue.component('custom-mail',{
+            template:`<div>
+                <input type="text" @input="handleInput($event)">
+                </div>`,
+            methods:{
+                vaildataMail(mail){
+                    return /^\w+{3,15}\@\w+\.[a-z]{2,3}$/.test(mail);
+                },
+                handleInput(event){
+                    let mail = event.target.value;
+                    if(this.vaildataMail(mail)){
+                        this.$emit('input',mail)
+                    }else{
+                        this.$emit('input','')
+                    }
+                }
+            }
+        })
+        var vm = new Vue({
+            el: '#app', //vue实例挂载的DOM
+            data: {
+                mail:''
+            }
+        })
+    </script>
+</body>
+
+</html>

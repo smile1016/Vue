@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <base-dialog>
+            <template v-slot:header>
+                <!-- 缩写 #header -->
+                编辑{{username}}
+            </template>
+            <template v-slot:main>
+                编辑的内容
+            </template>
+            <template>
+                other message
+            </template>
+        </base-dialog>
+    </div>
+
+    <!-- 具名插槽 -->
+    <script type="text/template" id="temp">
+        <div>
+            <div>
+                <slot name="header"></slot>
+            </div>
+            <div>
+                <slot name="main"></slot>
+            </div>
+            <div>
+                footer{{message}}
+                <slot></slot>
+            </div>
+        </div>
+    </script>
+    <script>
+        Vue.component('base-dialog', {
+            template: '#temp',
+            data:function(){
+                return{message:'xiaoxiao'} 
+            }
+        })
+        var vm = new Vue({
+            el: '#app', //vue实例挂载的DOM
+            data: {
+                username:'xiaoming'
+            }
+        })
+    </script>
+</body>
+
+</html>

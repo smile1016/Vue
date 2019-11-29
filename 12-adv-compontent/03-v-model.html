@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    
+    <div id="app">
+        <!-- <input type="text" :value='username' @input ="username=$event.target.value">
+        <input type="text" v-model="username"> -->
+        <custom-input v-model="username"></custom-input>
+        <!-- 组件实现v-model -->
+        {{username}}
+    </div>
+
+    <script>
+        Vue.component('custom-input',{
+            template:`<div>
+                <input type="text" @input="$emit('input',$event.target.value)">
+                </div>`
+        })
+        var vm = new Vue({
+            el: '#app', //vue实例挂载的DOM
+            data: {
+                username:'xiaoming'
+            }
+        })
+    </script>
+</body>
+
+</html>

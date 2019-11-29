@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+
+    <script>
+        //定义缓存插件
+        var cache = {
+            add:function(key,val){
+                if(localStorage){
+                    localStorage.setItem(key,val)
+                }else{
+                    document.cookie = ""
+                }
+
+            }
+        }
+        // 调用
+        var myPlugin = {
+            install(vue){
+                vue.prototype.$cache= cache;
+            }
+        }
+        Vue.use(myPlugin)
+        var vm = new Vue({
+            el:'#app',
+            mounted(){
+                // debugger
+                this.$cache.add('username','xiaoming')
+            }
+        })
+    </script>
+</body>
+</html>

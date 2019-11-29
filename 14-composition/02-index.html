@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+    <script>
+        const mixin1 = {
+            data:function(){
+                return{
+                    age:12
+                }
+            }
+        }
+        const mixin2 = {
+            methods:{
+                getcity(){
+                    return 'beijing';
+                }
+            }
+        }
+        //混入定义
+        // Vue.mixin({
+        //     created(){
+        //         console.log('from mixin')
+        //     },
+        //     data:function(){
+        //         return {
+        //             name:'user1',
+        //             age:'23'
+        //         }
+        //     },
+        //     methods:{
+        //         getusername(){
+        //             return this.name
+        //         }
+        //     },
+        // })
+        var vm = new Vue({
+            mixins:[mixin1,mixin2],
+            created(){
+                console.log('created')
+            },
+            // 挂载方式1
+            // el:'#app',
+            data:{
+                name:'user2',
+            },
+            methods:{
+                getusername(){
+                    return this.name
+                }
+            },
+            mounted(){
+                // 钩子函数都执行
+                // 属性，没有执行混入
+                // console.log(this.name)
+                console.log(this.age)
+                // console.log(this.getusername())
+                console.log(this.getcity())
+            }
+        })
+        //挂载方式2
+        vm.$mount('#app')
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自定义颜色指令</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1 v-color="'red'">gp16</h1>
+    </div>
+
+    <script>
+        // 全局自定义属性
+        Vue.directive('color',{
+            bind(el,options){
+                console.log(arguments);
+                el.style[options.name] = options.value
+            }
+        })
+        // bind,inserted
+        var vm = new Vue({
+            el:'#app',
+            data:{
+
+            }
+        })
+    </script>
+</body>
+</html>

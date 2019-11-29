@@ -64,22 +64,38 @@
             width: 50%;
             margin: 0 auto;
         }
+        .asc{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url("./升序.png");   
+        }
+        .desc{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url("./升序.png");   
+            transform: rotate(180deg);
+        }
+
     </style>
 </head>
 
 <body>
     <div id="app">
+        <input type="text" v-model = 'searchText'>
+        <button @click="search">搜索</button>
         <table>
             <tr>
                 <th>logo</th>
                 <th>公司名称</th>
                 <th style="width: 100px;">城市</th>
                 <th>职位名称</th>
-                <th style="width: 100px"><span>薪水</span><span class="sort sorting_sort"></span></th>
+                <th style="width: 100px"><span>薪水</span><span @click="handleSort" :class="{asc:sort=='asc',desc:sort=='desc'}"></span></th>
                 <th style="width: 100px">时间</th>
                 <th style="width: 120px">操作</th>
             </tr>
-            <tr v-for='item in list'>
+            <tr v-for='item in getlist'>
                 <td>
                     <img style="width: 90px;height: 90px;" :src="'http://localhost:3000/upload/'+item.companyLogo"
                         alt="">
@@ -140,24 +156,50 @@
                 sortname: 'salary',
                 sort: 'asc',
                 list: [],
+                sortlist:[],
                 total: 0,
                 isShowEdit: false,
+                searchText:'',
                 position: {
 
                 },
-                updateid: ''
+                updateid: '',
             },
             computed: {
                 pages() {
                     return Math.ceil(this.total / 10)
+                },
+                getlist(){
+                    if(this.sortlist.length === 0){
+                        return this.list;
+                    }
+                    let result = this.list.filter((item)=>{
+                        let reg = RegExp(this.keyword,'i')
+                        return (reg.test(item.companyName))
+                    })
+                    if(this.sort){
+                        // 排序
+                        let result = this.list.sort((a,b)=>{
+                            let s1 = parseInt(a['salary'].replace('k','')) 
+                            let s2 = parseInt(b['salary'].replace('k','')) 
+                           if(this.sort ==='asc'){
+                            return s1-s2;
+                           }else{
+                               return s2-s1;
+                           }
+                        })                    
+                    }
+                    this.sortlist = this.result
+                    return result;
                 }
             },
             created() {
                 // 请求数据
                 fetch('./data.json').then((res) => res.json()).then((result) => {
                     console.log(result)
-                    this.list = result.data
-                    this.total = result.total
+                    this.list = result.data; 
+                    this.sortlist = this.list;
+                    this.total = result.total;
                 })
             },
             methods: {
@@ -189,7 +231,16 @@
                             this.isShowEdit=false;
                         }
                     })
+                },
+                //搜索
+                search(){
+                    this.keyword = this.searchText
+                },
+                // 排序
+                handleSort(){
+                    this.sort=this.sort =='asc'?'desc':'asc'
                 }
+
             }
         })
     </script>
