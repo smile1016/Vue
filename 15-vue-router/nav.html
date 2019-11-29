@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>嵌套路由</title>
+    <script src="../vue.js"></script>
+    <script src="./vue-router.js"></script>
+    <style>
+        .container{
+            background: #efefef;
+            display: flex;
+        }
+        ul{
+            flex-basis: 200px;
+        }
+        .guide-container{
+            flex: 1;
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <router-link to="/guide">指南</router-link>
+        <router-link to="/api">api参考</router-link>
+        <router-link to="/updatalist">更新记录</router-link>
+        
+        <router-view class="container"></router-view>
+        <hr>
+        <button @click='handleClick'>编程式按钮</button>
+    </div>
+    <script>
+        const guide = {
+            template: `<div>
+                <ul>
+                    <router-link tag='li' to="/guide/install">安装</router-link>
+                    <router-link tag='li' to="/guide/introduce">介绍</router-link>
+                    <router-link tag='li' to="/guide/basic">基础</router-link>
+                </ul>
+                <div class='guide-container'>
+                    <router-view></router-view>    
+                </div>
+                </div>`
+        }
+        const api = {
+            template: `<div> api参考</div>`
+        }
+        const updatalist = {
+            template: `<div> 更新记录</div>`
+        }
+        const install = {
+            template: `<div> 安装</div>`
+        }
+        const introduce = {
+            template: `<div> 介绍</div>`
+        }
+        const basic = {
+            template: `<div> 基础</div>`
+        }
+        var routes = [
+            // 配置路径和组件,配置顺序：先匹配优先级高先生效，后匹配不生效
+            {
+                path: '',
+                redirect: '/guide'
+            }, //默认路径
+            {
+                path: '/guide',
+                component: guide,
+                redirect:'/guide/install',
+                // 嵌套路由
+                children:[
+                    {path:'install',component:install},
+                    {path:'introduce',component:introduce},
+                    {path:'basic',component:basic}
+                ]
+            },
+            {
+                path: '/api/:id',
+                component: api
+            },
+            {
+                path: '/updatalist',
+                component: updatalist
+            },
+        ]
+        var router = new VueRouter({
+            //默认hash
+            // mode:'history',
+            routes
+        })
+        var vm = new Vue({
+            router,
+            el: "#app",
+            methods:{
+                handleClick(){
+                    // router.push('api')
+                    // router.push({path:'/updatelist'})
+                    router.push({name:'api',params:{id:333}})
+                    // 指定path后，params不生效
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
