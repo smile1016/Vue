@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+    <script src="../vuex.js"></script>
+</head>
+<body>
+    <div id="app">
+        <counter-btn type='decrement'></counter-btn>
+        <counter-span></counter-span>
+        <counter-btn type='increment'></counter-btn>
+        <button @click='add'>action</button>
+    </div>
+
+    <script>
+        Vue.component('counter-span',{
+            template:'<span>{{$store.state.count}}</span>',
+            // template:'<span>{{store.state.count}}</span>'
+        })
+
+        Vue.component('counter-btn',{
+            props:['type'],
+            template:`<button @click="handleClick">{{btntext}}</button>`,
+            computed:{
+                btntext(){
+                    return this.type === 'increment'?'+':'-'
+                }
+            },
+            methods:{
+                handleClick(){
+                    if(this.type ==='increment'){
+                        //commit  的方式提交
+                        store.commit('increment',{num:2})
+                        // store.state.count++;//这种方式可以完成需求，但是不建议使用 
+                    }else{
+                        store.commit('decrement',{num:1})
+                    }
+                }
+            }
+        })
+        const store = new Vuex.Store({
+            state:{
+                // 存放数据信息
+                count:0
+            },
+            mutations:{
+                // 修改state里 的数据，通过commit调用
+                increment(state,obj){
+                    state.count+=obj.num;
+                },
+                decrement(state,obj){
+                    state.count-=obj.num;
+                }
+            },
+            actions:{
+                // 做异步数据处理，比如 ajax请求，通过dispatch
+                add({commit},obj){
+                    setTimeout(()=>{
+                        commit('increment',obj)
+                    },2000)
+                }
+            }
+        })
+        var vm = new Vue({
+            store,//注入上面定义的store
+            el:'#app',
+            methods:{
+                add(){
+                    // 实例中调用action方法
+                    store.dispatch('add',{num:5})
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+    <script src="./vue-router.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <router-link to="/position/">职位管理</router-link>
+        <router-link to="/search">搜索</router-link>
+        <router-view></router-view>
+    </div>
+    <script>
+        const position = {
+            template: `
+                <div>
+                    position 
+                </div>
+                `
+        }
+        const search = {
+            template: `<div>search</div>`
+        }
+        
+        var routes = [
+            // 是一个数组，配置多个
+            // 配置路径和组件,配置顺序：先匹配优先级高先生效，后匹配不生效
+            {path: '/position',component: position},
+            {path: '/search',component: search},
+        ]
+        var router = new VueRouter({
+            //默认hash
+            // mode:'history',
+            routes
+        })
+        var vm = new Vue({
+            router,
+            el: "#app"
+        })
+    </script>
+</body>
+
+</html>

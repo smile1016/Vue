@@ -1,0 +1,1176 @@
+[{
+    "cityId": "2210",
+    "cityName": "爱丁堡",
+    "timeZone": "+00:00",
+    "nationId": "183"
+}, {
+    "cityId": "953",
+    "cityName": "艾克斯",
+    "timeZone": "+01:00",
+    "nationId": "59"
+}, {
+    "cityId": "517",
+    "cityName": "埃里温",
+    "timeZone": "+05:00",
+    "nationId": "12"
+}, {
+    "cityId": "848",
+    "cityName": "埃斯波",
+    "timeZone": "+02:00",
+    "nationId": "58"
+}, {
+    "cityId": "2066",
+    "cityName": "阿利坎特",
+    "timeZone": "+01:00",
+    "nationId": "160"
+}, {
+    "cityId": "1728",
+    "cityName": "阿姆斯特丹",
+    "timeZone": "+01:00",
+    "nationId": "124"
+}, {
+    "cityId": "944",
+    "cityName": "阿讷西",
+    "timeZone": "+01:00",
+    "nationId": "59"
+}, {
+    "cityId": "2186",
+    "cityName": "安卡拉",
+    "timeZone": "+02:00",
+    "nationId": "178"
+}, {
+    "cityId": "2338",
+    "cityName": "奥兰多",
+    "timeZone": "-05:00",
+    "nationId": "184"
+}, {
+    "cityId": "920",
+    "cityName": "阿让",
+    "timeZone": "+01:00",
+    "nationId": "59"
+}, {
+    "cityId": "1600",
+    "cityName": "八打灵",
+    "timeZone": "+08:00",
+    "nationId": "106"
+}, {
+    "cityId": "968",
+    "cityName": "柏林",
+    "timeZone": "+01:00",
+    "nationId": "65"
+}, {
+    "cityId": "2745",
+    "cityName": "拜县",
+    "timeZone": "+7:00",
+    "nationId": "172"
+}, {
+    "cityId": "2068",
+    "cityName": "巴伦西亚",
+    "timeZone": "+01:00",
+    "nationId": "160"
+}, {
+    "cityId": "2049",
+    "cityName": "巴塞罗那",
+    "timeZone": "+01:00",
+    "nationId": "160"
+}, {
+    "cityId": "2735",
+    "cityName": "巴蜀",
+    "timeZone": "+7:00",
+    "nationId": "172"
+}, {
+    "cityId": "1213",
+    "cityName": "八王子",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "2744",
+    "cityName": "北榄",
+    "timeZone": "+7:00",
+    "nationId": "172"
+}, {
+    "cityId": "1748",
+    "cityName": "北帕默斯顿",
+    "timeZone": "+12:00",
+    "nationId": "125"
+}, {
+    "cityId": "1496",
+    "cityName": "槟城",
+    "timeZone": "+08:00",
+    "nationId": "106"
+}, {
+    "cityId": "1177",
+    "cityName": "比萨",
+    "timeZone": "+01:00",
+    "nationId": "84"
+}, {
+    "cityId": "2860",
+    "cityName": "波恩",
+    "timeZone": "+01:00",
+    "nationId": "65"
+}, {
+    "cityId": "2125",
+    "cityName": "伯尔尼",
+    "timeZone": "+01:00",
+    "nationId": "168"
+}, {
+    "cityId": "1868",
+    "cityName": "波尔图",
+    "timeZone": "+00:00",
+    "nationId": "139"
+}, {
+    "cityId": "2882",
+    "cityName": "薄荷岛",
+    "timeZone": "+08:00",
+    "nationId": "137"
+}, {
+    "cityId": "2879",
+    "cityName": "博卡拉",
+    "timeZone": "+05:45",
+    "nationId": "122"
+}, {
+    "cityId": "1164",
+    "cityName": "博洛尼亚",
+    "timeZone": "+01:00",
+    "nationId": "84"
+}, {
+    "cityId": "2222",
+    "cityName": "伯明翰",
+    "timeZone": "+00:00",
+    "nationId": "183"
+}, {
+    "cityId": "2851",
+    "cityName": "长滩岛",
+    "timeZone": "+08:00",
+    "nationId": "137"
+}, {
+    "cityId": "2406",
+    "cityName": "波士顿",
+    "timeZone": "-05:00",
+    "nationId": "184"
+}, {
+    "cityId": "557",
+    "cityName": "珀斯",
+    "timeZone": "+08:00",
+    "nationId": "14"
+}, {
+    "cityId": "1067",
+    "cityName": "布达佩斯",
+    "timeZone": "+01:00",
+    "nationId": "76"
+}, {
+    "cityId": "775",
+    "cityName": "布拉格",
+    "timeZone": "+01:00",
+    "nationId": "47"
+}, {
+    "cityId": "531",
+    "cityName": "布里斯班",
+    "timeZone": "+10:00",
+    "nationId": "14"
+}, {
+    "cityId": "599",
+    "cityName": "布鲁塞尔",
+    "timeZone": "+01:00",
+    "nationId": "22"
+}, {
+    "cityId": "890",
+    "cityName": "布卢瓦",
+    "timeZone": "+01:00",
+    "nationId": "59"
+}, {
+    "cityId": "2804",
+    "cityName": "本那比",
+    "timeZone": "-8:00",
+    "nationId": "35"
+}, {
+    "cityId": "1240",
+    "cityName": "柴桢",
+    "timeZone": "+07:00",
+    "nationId": "89"
+}, {
+    "cityId": "2836",
+    "cityName": "长野",
+    "timeZone": "+9:00",
+    "nationId": "87"
+}, {
+    "cityId": "2626",
+    "cityName": "池田",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "1218",
+    "cityName": "冲绳",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "1198",
+    "cityName": "川崎",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "2743",
+    "cityName": "高贵林",
+    "timeZone": "-08:00",
+    "nationId": "35"
+}, {
+    "cityId": "2613",
+    "cityName": "达喀尔",
+    "timeZone": "+00:00",
+    "nationId": "150"
+}, {
+    "cityId": "2308",
+    "cityName": "达拉斯",
+    "timeZone": "-06:00",
+    "nationId": "184"
+}, {
+    "cityId": "1291",
+    "cityName": "大邱",
+    "timeZone": "+09:00",
+    "nationId": "92"
+}, {
+    "cityId": "1005",
+    "cityName": "德累斯顿",
+    "timeZone": "+01:00",
+    "nationId": "65"
+}, {
+    "cityId": "2203",
+    "cityName": "迪拜",
+    "timeZone": "+04:00",
+    "nationId": "182"
+}, {
+    "cityId": "2603",
+    "cityName": "第比利斯",
+    "timeZone": "+04:00",
+    "nationId": "64"
+}, {
+    "cityId": "1798",
+    "cityName": "迪戈斯",
+    "timeZone": "+08:00",
+    "nationId": "137"
+}, {
+    "cityId": "1216",
+    "cityName": "东大阪",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "712",
+    "cityName": "多伦多",
+    "timeZone": "-06:00",
+    "nationId": "35"
+}, {
+    "cityId": "973",
+    "cityName": "杜塞尔多夫",
+    "timeZone": "+01:00",
+    "nationId": "65"
+}, {
+    "cityId": "1133",
+    "cityName": "都柏林",
+    "timeZone": "+00:00",
+    "nationId": "82"
+}, {
+    "cityId": "1574",
+    "cityName": "斗亚兰",
+    "timeZone": "+08:00",
+    "nationId": "106"
+}, {
+    "cityId": "978",
+    "cityName": "法兰克福",
+    "timeZone": "+01:00",
+    "nationId": "65"
+}, {
+    "cityId": "2601",
+    "cityName": "斐济",
+    "timeZone": "+12:00",
+    "nationId": "57"
+}, {
+    "cityId": "1616",
+    "cityName": "费利杜",
+    "timeZone": "+05:00",
+    "nationId": "107"
+}, {
+    "cityId": "1174",
+    "cityName": "佛罗伦萨",
+    "timeZone": "+01:00",
+    "nationId": "84"
+}, {
+    "cityId": "1197",
+    "cityName": "福冈",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "2850",
+    "cityName": "富国岛",
+    "timeZone": "+7:00",
+    "nationId": "188"
+}, {
+    "cityId": "710",
+    "cityName": "弗雷德里顿",
+    "timeZone": "-04:00",
+    "nationId": "35"
+}, {
+    "cityId": "2789",
+    "cityName": "富良野",
+    "timeZone": "+9:00",
+    "nationId": "87"
+}, {
+    "cityId": "2833",
+    "cityName": "富士河口湖",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "2863",
+    "cityName": "戛纳",
+    "timeZone": "+01:00",
+    "nationId": "59"
+}, {
+    "cityId": "785",
+    "cityName": "哥本哈根",
+    "timeZone": "+01:00",
+    "nationId": "48"
+}, {
+    "cityId": "2902",
+    "cityName": "阁昌",
+    "timeZone": "+07:00",
+    "nationId": "172"
+}, {
+    "cityId": "1576",
+    "cityName": "哥打马鲁都",
+    "timeZone": "+08:00",
+    "nationId": "106"
+}, {
+    "cityId": "2212",
+    "cityName": "格拉斯哥",
+    "timeZone": "+00:00",
+    "nationId": "183"
+}, {
+    "cityId": "1603",
+    "cityName": "瓜拉雪兰莪",
+    "timeZone": "+08:00",
+    "nationId": "106"
+}, {
+    "cityId": "1200",
+    "cityName": "广岛",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "2759",
+    "cityName": "国头",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "1968",
+    "cityName": "海参崴",
+    "timeZone": "+09:00",
+    "nationId": "144"
+}, {
+    "cityId": "1730",
+    "cityName": "海牙",
+    "timeZone": "+01:00",
+    "nationId": "124"
+}, {
+    "cityId": "2715",
+    "cityName": "函馆",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "1744",
+    "cityName": "哈密尔顿",
+    "timeZone": "+12:00",
+    "nationId": "125"
+}, {
+    "cityId": "2050",
+    "cityName": "赫罗纳",
+    "timeZone": "+01:00",
+    "nationId": "160"
+}, {
+    "cityId": "2582",
+    "cityName": "河内",
+    "timeZone": "+07:00",
+    "nationId": "188"
+}, {
+    "cityId": "1192",
+    "cityName": "横滨",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "532",
+    "cityName": "黄金海岸",
+    "timeZone": "+10:00",
+    "nationId": "14"
+}, {
+    "cityId": "1822",
+    "cityName": "华沙",
+    "timeZone": "+01:00",
+    "nationId": "138"
+}, {
+    "cityId": "2350",
+    "cityName": "华盛顿",
+    "timeZone": "-05:00",
+    "nationId": "184"
+}, {
+    "cityId": "2741",
+    "cityName": "华欣",
+    "timeZone": "+7:00",
+    "nationId": "172"
+}, {
+    "cityId": "547",
+    "cityName": "霍巴特",
+    "timeZone": "+10:00",
+    "nationId": "14"
+}, {
+    "cityId": "2583",
+    "cityName": "胡志明",
+    "timeZone": "+07:00",
+    "nationId": "188"
+}, {
+    "cityId": "2849",
+    "cityName": "伊斯坦布尔",
+    "timeZone": "+2:00",
+    "nationId": "178"
+}, {
+    "cityId": "1711",
+    "cityName": "加德满都",
+    "timeZone": "+05:45",
+    "nationId": "122"
+}, {
+    "cityId": "2746",
+    "cityName": "甲米",
+    "timeZone": "+7:00",
+    "nationId": "172"
+}, {
+    "cityId": "2777",
+    "cityName": "江别",
+    "timeZone": "+9:00",
+    "nationId": "87"
+}, {
+    "cityId": "1204",
+    "cityName": "堺",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "1755",
+    "cityName": "基督城",
+    "timeZone": "+12:00",
+    "nationId": "125"
+}, {
+    "cityId": "1232",
+    "cityName": "金边",
+    "timeZone": "+07:00",
+    "nationId": "89"
+}, {
+    "cityId": "1207",
+    "cityName": "静冈",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "2890",
+    "cityName": "金泽",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "2360",
+    "cityName": "旧金山",
+    "timeZone": "-08:00",
+    "nationId": "184"
+}, {
+    "cityId": "1345",
+    "cityName": "巨済",
+    "timeZone": "+09:00",
+    "nationId": "92"
+}, {
+    "cityId": "2798",
+    "cityName": "卡尔加里",
+    "timeZone": "-7:00",
+    "nationId": "35"
+}, {
+    "cityId": "533",
+    "cityName": "凯恩斯",
+    "timeZone": "+10:00",
+    "nationId": "14"
+}, {
+    "cityId": "823",
+    "cityName": "开罗",
+    "timeZone": "+02:00",
+    "nationId": "53"
+}, {
+    "cityId": "2616",
+    "cityName": "开普敦",
+    "timeZone": "+02:00",
+    "nationId": "159"
+}, {
+    "cityId": "2076",
+    "cityName": "康提",
+    "timeZone": "+05:30",
+    "nationId": "161"
+}, {
+    "cityId": "1697",
+    "cityName": "卡萨布兰卡",
+    "timeZone": "+00:00",
+    "nationId": "118"
+}, {
+    "cityId": "1819",
+    "cityName": "克拉科夫",
+    "timeZone": "+01:00",
+    "nationId": "138"
+}, {
+    "cityId": "862",
+    "cityName": "克雷泰伊",
+    "timeZone": "+01:00",
+    "nationId": "59"
+}, {
+    "cityId": "2317",
+    "cityName": "克利夫兰",
+    "timeZone": "-05:00",
+    "nationId": "184"
+}, {
+    "cityId": "974",
+    "cityName": "科隆",
+    "timeZone": "+01:00",
+    "nationId": "65"
+}, {
+    "cityId": "2069",
+    "cityName": "科伦坡",
+    "timeZone": "+05:30",
+    "nationId": "161"
+}, {
+    "cityId": "1733",
+    "cityName": "莱顿",
+    "timeZone": "+01:00",
+    "nationId": "124"
+}, {
+    "cityId": "548",
+    "cityName": "朗塞斯顿",
+    "timeZone": "+10:00",
+    "nationId": "14"
+}, {
+    "cityId": "2858",
+    "cityName": "兰卡威",
+    "timeZone": "+08:00",
+    "nationId": "106"
+}, {
+    "cityId": "2460",
+    "cityName": "拉斯维加斯",
+    "timeZone": "-07:00",
+    "nationId": "184"
+}, {
+    "cityId": "908",
+    "cityName": "雷恩",
+    "timeZone": "+01:00",
+    "nationId": "59"
+}, {
+    "cityId": "2896",
+    "cityName": "镰仓",
+    "timeZone": "+9:00",
+    "nationId": "87"
+}, {
+    "cityId": "940",
+    "cityName": "里昂",
+    "timeZone": "+01:00",
+    "nationId": "59"
+}, {
+    "cityId": "878",
+    "cityName": "里尔",
+    "timeZone": "+01:00",
+    "nationId": "59"
+}, {
+    "cityId": "2240",
+    "cityName": "列斯特",
+    "timeZone": "+00:00",
+    "nationId": "183"
+}, {
+    "cityId": "1795",
+    "cityName": "利马",
+    "timeZone": "-05:00",
+    "nationId": "136"
+}, {
+    "cityId": "1871",
+    "cityName": "里斯本",
+    "timeZone": "+00:00",
+    "nationId": "139"
+}, {
+    "cityId": "2238",
+    "cityName": "利物浦",
+    "timeZone": "+00:00",
+    "nationId": "183"
+}, {
+    "cityId": "2242",
+    "cityName": "伦敦",
+    "timeZone": "+00:00",
+    "nationId": "183"
+}, {
+    "cityId": "1181",
+    "cityName": "罗马",
+    "timeZone": "+01:00",
+    "nationId": "84"
+}, {
+    "cityId": "2899",
+    "cityName": "罗托鲁瓦",
+    "timeZone": "+12:00",
+    "nationId": "125"
+}, {
+    "cityId": "1731",
+    "cityName": "鹿特丹",
+    "timeZone": "+01:00",
+    "nationId": "124"
+}, {
+    "cityId": "2060",
+    "cityName": "马德里",
+    "timeZone": "+01:00",
+    "nationId": "160"
+}, {
+    "cityId": "2343",
+    "cityName": "迈阿密",
+    "timeZone": "-05:00",
+    "nationId": "184"
+}, {
+    "cityId": "2723",
+    "cityName": "马卡蒂",
+    "timeZone": "+08:00",
+    "nationId": "137"
+}, {
+    "cityId": "2024",
+    "cityName": "马拉加",
+    "timeZone": "+01:00",
+    "nationId": "160"
+}, {
+    "cityId": "1699",
+    "cityName": "马拉喀什",
+    "timeZone": "+00:00",
+    "nationId": "118"
+}, {
+    "cityId": "1620",
+    "cityName": "马累",
+    "timeZone": "+05:00",
+    "nationId": "107"
+}, {
+    "cityId": "1527",
+    "cityName": "马六甲",
+    "timeZone": "+08:00",
+    "nationId": "106"
+}, {
+    "cityId": "2243",
+    "cityName": "曼彻斯特",
+    "timeZone": "+00:00",
+    "nationId": "183"
+}, {
+    "cityId": "2725",
+    "cityName": "曼达卢永",
+    "timeZone": "+08:00",
+    "nationId": "137"
+}, {
+    "cityId": "2714",
+    "cityName": "马塔兰",
+    "timeZone": "+08:00",
+    "nationId": "79"
+}, {
+    "cityId": "2720",
+    "cityName": "马尼拉",
+    "timeZone": "+08:00",
+    "nationId": "137"
+}, {
+    "cityId": "1285",
+    "cityName": "蒙巴萨",
+    "timeZone": "+03:00",
+    "nationId": "91"
+}, {
+    "cityId": "2855",
+    "cityName": "蒙特利尔",
+    "timeZone": "-04:00",
+    "nationId": "35"
+}, {
+    "cityId": "2886",
+    "cityName": "虻田",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "1150",
+    "cityName": "米兰",
+    "timeZone": "+01:00",
+    "nationId": "84"
+}, {
+    "cityId": "857",
+    "cityName": "默伦",
+    "timeZone": "+01:00",
+    "nationId": "59"
+}, {
+    "cityId": "1897",
+    "cityName": "莫斯科",
+    "timeZone": "+03:00",
+    "nationId": "144"
+}, {
+    "cityId": "1646",
+    "cityName": "墨西哥城",
+    "timeZone": "-06:00",
+    "nationId": "113"
+}, {
+    "cityId": "988",
+    "cityName": "慕尼黑",
+    "timeZone": "+01:00",
+    "nationId": "65"
+}, {
+    "cityId": "2749",
+    "cityName": "那霸",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "1193",
+    "cityName": "名古屋",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "2758",
+    "cityName": "南城",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "860",
+    "cityName": "楠泰尔",
+    "timeZone": "+01:00",
+    "nationId": "59"
+}, {
+    "cityId": "1217",
+    "cityName": "奈良",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "1284",
+    "cityName": "内罗毕",
+    "timeZone": "+03:00",
+    "nationId": "91"
+}, {
+    "cityId": "2808",
+    "cityName": "新威斯敏斯特",
+    "timeZone": "-8:00",
+    "nationId": "35"
+}, {
+    "cityId": "2075",
+    "cityName": "尼甘布",
+    "timeZone": "+05:30",
+    "nationId": "161"
+}, {
+    "cityId": "951",
+    "cityName": "尼斯",
+    "timeZone": "+01:00",
+    "nationId": "59"
+}, {
+    "cityId": "2245",
+    "cityName": "牛津",
+    "timeZone": "+00:00",
+    "nationId": "183"
+}, {
+    "cityId": "558",
+    "cityName": "纽卡斯尔",
+    "timeZone": "+10:00",
+    "nationId": "14"
+}, {
+    "cityId": "2465",
+    "cityName": "纽约",
+    "timeZone": "-05:00",
+    "nationId": "184"
+}, {
+    "cityId": "2857",
+    "cityName": "尼亚加拉瀑布城",
+    "timeZone": "-06:00",
+    "nationId": "35"
+}, {
+    "cityId": "2030",
+    "cityName": "帕尔马",
+    "timeZone": "+01:00",
+    "nationId": "160"
+}, {
+    "cityId": "2719",
+    "cityName": "帕赛",
+    "timeZone": "+08:00",
+    "nationId": "137"
+}, {
+    "cityId": "2730",
+    "cityName": "帕西格",
+    "timeZone": "+08:00",
+    "nationId": "137"
+}, {
+    "cityId": "1308",
+    "cityName": "平昌郡",
+    "timeZone": "+09:00",
+    "nationId": "92"
+}, {
+    "cityId": "2752",
+    "cityName": "浦添",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "2838",
+    "cityName": "青森",
+    "timeZone": "+9:00",
+    "nationId": "87"
+}, {
+    "cityId": "1328",
+    "cityName": "庆州",
+    "timeZone": "+09:00",
+    "nationId": "92"
+}, {
+    "cityId": "1199",
+    "cityName": "埼玉",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "1392",
+    "cityName": "全州",
+    "timeZone": "+09:00",
+    "nationId": "92"
+}, {
+    "cityId": "2848",
+    "cityName": "皇后镇",
+    "timeZone": "+12:00",
+    "nationId": "125"
+}, {
+    "cityId": "1146",
+    "cityName": "热那亚",
+    "timeZone": "+01:00",
+    "nationId": "84"
+}, {
+    "cityId": "1293",
+    "cityName": "仁川",
+    "timeZone": "+09:00",
+    "nationId": "92"
+}, {
+    "cityId": "2803",
+    "cityName": "列治文",
+    "timeZone": "-8:00",
+    "nationId": "35"
+}, {
+    "cityId": "2891",
+    "cityName": "日光",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "2129",
+    "cityName": "日内瓦",
+    "timeZone": "+01:00",
+    "nationId": "168"
+}, {
+    "cityId": "1128",
+    "cityName": "日惹",
+    "timeZone": "+07:00",
+    "nationId": "79"
+}, {
+    "cityId": "2716",
+    "cityName": "塞班岛",
+    "timeZone": "+10:00",
+    "nationId": "184"
+}, {
+    "cityId": "2254",
+    "cityName": "桑德兰",
+    "timeZone": "+00:00",
+    "nationId": "183"
+}, {
+    "cityId": "1194",
+    "cityName": "札幌",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "1604",
+    "cityName": "沙白安南",
+    "timeZone": "+08:00",
+    "nationId": "106"
+}, {
+    "cityId": "2831",
+    "cityName": "山中湖",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "660",
+    "cityName": "圣保罗",
+    "timeZone": "-03:00",
+    "nationId": "28"
+}, {
+    "cityId": "1914",
+    "cityName": "圣彼得堡",
+    "timeZone": "+03:00",
+    "nationId": "144"
+}, {
+    "cityId": "2362",
+    "cityName": "圣迭戈",
+    "timeZone": "-08:00",
+    "nationId": "184"
+}, {
+    "cityId": "2363",
+    "cityName": "圣何塞",
+    "timeZone": "-08:00",
+    "nationId": "184"
+}, {
+    "cityId": "2127",
+    "cityName": "圣加仑",
+    "timeZone": "+01:00",
+    "nationId": "168"
+}, {
+    "cityId": "2875",
+    "cityName": "圣托里尼",
+    "timeZone": "+02:00",
+    "nationId": "68"
+}, {
+    "cityId": "1195",
+    "cityName": "神戸",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "2751",
+    "cityName": "石垣",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "1310",
+    "cityName": "束草",
+    "timeZone": "+09:00",
+    "nationId": "92"
+}, {
+    "cityId": "1446",
+    "cityName": "水原",
+    "timeZone": "+09:00",
+    "nationId": "92"
+}, {
+    "cityId": "2117",
+    "cityName": "斯德哥尔摩",
+    "timeZone": "+01:00",
+    "nationId": "167"
+}, {
+    "cityId": "2754",
+    "cityName": "糸满",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "1127",
+    "cityName": "泗水",
+    "timeZone": "+07:00",
+    "nationId": "79"
+}, {
+    "cityId": "872",
+    "cityName": "斯特拉斯堡",
+    "timeZone": "+01:00",
+    "nationId": "59"
+}, {
+    "cityId": "2124",
+    "cityName": "苏黎世",
+    "timeZone": "+01:00",
+    "nationId": "168"
+}, {
+    "cityId": "665",
+    "cityName": "索非亚",
+    "timeZone": "+02:00",
+    "nationId": "30"
+}, {
+    "cityId": "2805",
+    "cityName": "素里",
+    "timeZone": "-8:00",
+    "nationId": "35"
+}, {
+    "cityId": "2733",
+    "cityName": "塔吉格",
+    "timeZone": "+08:00",
+    "nationId": "137"
+}, {
+    "cityId": "2346",
+    "cityName": "坦帕",
+    "timeZone": "-05:00",
+    "nationId": "184"
+}, {
+    "cityId": "2498",
+    "cityName": "檀香山",
+    "timeZone": "-10:00",
+    "nationId": "184"
+}, {
+    "cityId": "2801",
+    "cityName": "温哥华",
+    "timeZone": "-8:00",
+    "nationId": "35"
+}, {
+    "cityId": "1126",
+    "cityName": "万隆",
+    "timeZone": "+07:00",
+    "nationId": "79"
+}, {
+    "cityId": "1461",
+    "cityName": "万象",
+    "timeZone": "+07:00",
+    "nationId": "95"
+}, {
+    "cityId": "716",
+    "cityName": "维多利亚",
+    "timeZone": "-08:00",
+    "nationId": "35"
+}, {
+    "cityId": "1155",
+    "cityName": "威尼斯",
+    "timeZone": "+01:00",
+    "nationId": "84"
+}, {
+    "cityId": "569",
+    "cityName": "维也纳",
+    "timeZone": "+01:00",
+    "nationId": "15"
+}, {
+    "cityId": "1702",
+    "cityName": "温得和克",
+    "timeZone": "+01:00",
+    "nationId": "120"
+}, {
+    "cityId": "664",
+    "cityName": "文莱",
+    "timeZone": "+08:00",
+    "nationId": "29"
+}, {
+    "cityId": "713",
+    "cityName": "温尼伯",
+    "timeZone": "-06:00",
+    "nationId": "35"
+}, {
+    "cityId": "2802",
+    "cityName": "西温",
+    "timeZone": "-8:00",
+    "nationId": "35"
+}, {
+    "cityId": "2806",
+    "cityName": "白石",
+    "timeZone": "-8:00",
+    "nationId": "35"
+}, {
+    "cityId": "2856",
+    "cityName": "渥太华",
+    "timeZone": "-06:00",
+    "nationId": "35"
+}, {
+    "cityId": "1725",
+    "cityName": "乌得勒支",
+    "timeZone": "+01:00",
+    "nationId": "124"
+}, {
+    "cityId": "1447",
+    "cityName": "乌山",
+    "timeZone": "+09:00",
+    "nationId": "92"
+}, {
+    "cityId": "990",
+    "cityName": "下拜恩",
+    "timeZone": "+01:00",
+    "nationId": "65"
+}, {
+    "cityId": "1588",
+    "cityName": "仙本那",
+    "timeZone": "+08:00",
+    "nationId": "106"
+}, {
+    "cityId": "1237",
+    "cityName": "暹粒",
+    "timeZone": "+07:00",
+    "nationId": "89"
+}, {
+    "cityId": "1201",
+    "cityName": "仙台",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "2765",
+    "cityName": "小樽",
+    "timeZone": "+9:00",
+    "nationId": "87"
+}, {
+    "cityId": "2265",
+    "cityName": "谢菲尔德",
+    "timeZone": "+00:00",
+    "nationId": "183"
+}, {
+    "cityId": "2395",
+    "cityName": "新奥尔良",
+    "timeZone": "-06:00",
+    "nationId": "184"
+}, {
+    "cityId": "1558",
+    "cityName": "新山",
+    "timeZone": "+08:00",
+    "nationId": "106"
+}, {
+    "cityId": "1210",
+    "cityName": "熊本",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "2353",
+    "cityName": "西雅图",
+    "timeZone": "-08:00",
+    "nationId": "184"
+}, {
+    "cityId": "1607",
+    "cityName": "雪邦",
+    "timeZone": "+08:00",
+    "nationId": "106"
+}, {
+    "cityId": "1019",
+    "cityName": "雅典",
+    "timeZone": "+02:00",
+    "nationId": "68"
+}, {
+    "cityId": "1124",
+    "cityName": "雅加达",
+    "timeZone": "+07:00",
+    "nationId": "79"
+}, {
+    "cityId": "1528",
+    "cityName": "亚罗牙也",
+    "timeZone": "+08:00",
+    "nationId": "106"
+}, {
+    "cityId": "2550",
+    "cityName": "亚特兰大",
+    "timeZone": "-05:00",
+    "nationId": "184"
+}, {
+    "cityId": "2840",
+    "cityName": "芽庄",
+    "timeZone": "+07:00",
+    "nationId": "188"
+}, {
+    "cityId": "717",
+    "cityName": "耶洛奈夫",
+    "timeZone": "-07:00",
+    "nationId": "35"
+}, {
+    "cityId": "1141",
+    "cityName": "耶路撒冷",
+    "timeZone": "+02:00",
+    "nationId": "83"
+}, {
+    "cityId": "1550",
+    "cityName": "怡保",
+    "timeZone": "+08:00",
+    "nationId": "106"
+}, {
+    "cityId": "1957",
+    "cityName": "伊尔库茨克",
+    "timeZone": "+08:00",
+    "nationId": "144"
+}, {
+    "cityId": "2876",
+    "cityName": "因特拉肯",
+    "timeZone": "+01:00",
+    "nationId": "168"
+}, {
+    "cityId": "2750",
+    "cityName": "宜野湾",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "2756",
+    "cityName": "宇流麻",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}, {
+    "cityId": "2534",
+    "cityName": "芝加哥",
+    "timeZone": "-06:00",
+    "nationId": "184"
+}, {
+    "cityId": "2854",
+    "cityName": "足柄下郡",
+    "timeZone": "+09:00",
+    "nationId": "87"
+}]

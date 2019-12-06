@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="../vue.js"></script>
+  <script src="./vue-router.js"></script>
+</head>
+
+<body>
+
+  <div id="app">
+    <router-link to="/position/1">职位管理</router-link>
+    <router-link to="/position/2">职位管理</router-link>
+    <router-link to="/search">搜索</router-link>
+
+    <router-view></router-view>
+
+  </div>
+
+
+
+  <script>
+
+    const position = {
+      template: `<div>position</div>`,
+      beforeRouteUpdate:(to,from,next)=>{
+        console.log('beforeRouteUpdate');
+        console.log(to,from);
+        next()
+      }
+    }
+
+    const search = {
+      template: `<div>search</div>`
+    }
+
+
+    var routes = [{
+      path: '/position/:id', component: position,
+      beforeEnter:(to,from,next)=>{
+          console.log(to,from);
+          next()
+      }
+    }, {
+      path: '/search', component: search
+    }
+
+    ];
+
+
+    var router = new VueRouter({
+      mode: 'hash',
+      routes
+    })
+    // router.beforeEach((to,from,next)=>{
+    //     console.log('beforeEach')
+    // })
+    // router.beforeResolve(()=>{
+    //     console.log('beforeResolve')
+    // })
+    // router.afterResolve((to,from,next)=>{
+    //     console.log('afterResolve')
+    // })
+    var vm = new Vue({
+      router,
+      el: "#app"
+    })
+
+  </script>
+
+
+</body>
+
+</html>

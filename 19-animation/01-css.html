@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background: pink;
+            animation: move 3s infinite;
+            transition: all 3s;
+        }
+
+        @keyframes move {
+            25% {
+                background: orange;
+            }
+
+            50% {
+                background: skyblue;
+            }
+
+            75% {
+                background: tomato;
+            }
+
+            75% {
+                background: rgb(191, 236, 131);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="app">
+        <button @click = 'show = !show'>显示/隐藏</button>
+        <div v-show='show' id="box" class="box"></div>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data:{
+                show
+            }
+        })
+    </script>
+</body>
+
+</html>

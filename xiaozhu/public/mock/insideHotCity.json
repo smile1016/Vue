@@ -1,0 +1,115 @@
+[{
+    "cityId": "12",
+    "cityName": "北京",
+    "domain": "bj",
+    "timeZone": "+08:00",
+    "nationId": "0"
+}, {
+    "cityId": "13",
+    "cityName": "上海",
+    "domain": "sh",
+    "timeZone": "+08:00",
+    "nationId": "0"
+}, {
+    "cityId": "45",
+    "cityName": "成都",
+    "domain": "cd",
+    "timeZone": "+08:00",
+    "nationId": "0"
+}, {
+    "cityId": "16",
+    "cityName": "广州",
+    "domain": "gz",
+    "timeZone": "+08:00",
+    "nationId": "0"
+}, {
+    "cityId": "17",
+    "cityName": "深圳",
+    "domain": "sz",
+    "timeZone": "+08:00",
+    "nationId": "0"
+}, {
+    "cityId": "344",
+    "cityName": "香港",
+    "domain": "hongkong",
+    "timeZone": "+08:00",
+    "nationId": "0"
+}, {
+    "cityId": "144",
+    "cityName": "三亚",
+    "domain": "sanya",
+    "timeZone": "+08:00",
+    "nationId": "0"
+}, {
+    "cityId": "15",
+    "cityName": "重庆",
+    "domain": "cq",
+    "timeZone": "+08:00",
+    "nationId": "0"
+}, {
+    "cityId": "176",
+    "cityName": "西安",
+    "domain": "xa",
+    "timeZone": "+08:00",
+    "nationId": "0"
+}, {
+    "cityId": "26",
+    "cityName": "杭州",
+    "domain": "hz",
+    "timeZone": "+08:00",
+    "nationId": "0"
+}, {
+    "cityId": "93",
+    "cityName": "哈尔滨",
+    "domain": "hrb",
+    "timeZone": "+08:00",
+    "nationId": "0"
+}, {
+    "cityId": "76",
+    "cityName": "厦门",
+    "domain": "xm",
+    "timeZone": "+08:00",
+    "nationId": "0"
+}, {
+    "cityId": "194",
+    "cityName": "武汉",
+    "domain": "wh",
+    "timeZone": "+08:00",
+    "nationId": "0"
+}, {
+    "cityId": "204",
+    "cityName": "长沙",
+    "domain": "cs",
+    "timeZone": "+08:00",
+    "nationId": "0"
+}, {
+    "cityId": "14",
+    "cityName": "天津",
+    "domain": "tj",
+    "timeZone": "+08:00",
+    "nationId": "0"
+}, {
+    "cityId": "65",
+    "cityName": "南京",
+    "domain": "nj",
+    "timeZone": "+08:00",
+    "nationId": "0"
+}, {
+    "cityId": "67",
+    "cityName": "苏州",
+    "domain": "su",
+    "timeZone": "+08:00",
+    "nationId": "0"
+}, {
+    "cityId": "225",
+    "cityName": "昆明",
+    "domain": "km",
+    "timeZone": "+08:00",
+    "nationId": "0"
+}, {
+    "cityId": "114",
+    "cityName": "青岛",
+    "domain": "qd",
+    "timeZone": "+08:00",
+    "nationId": "0"
+}]

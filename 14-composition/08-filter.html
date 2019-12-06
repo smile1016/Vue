@@ -23,7 +23,7 @@
         }),
 
         Vue.filter('prefix',function(val){
-            return "今天是："+val
+            return "今年是："+val
         })
         // 调用
         
@@ -33,6 +33,7 @@
                 time:'2019-11-27'
            },
            computed:{
+               // 不使用过滤器时的操作
                getyear(){
 
                }

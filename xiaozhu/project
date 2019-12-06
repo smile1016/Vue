@@ -1,0 +1,40 @@
+index.vue
+
+https://wirelesspub.xiaozhu.com/app/xzfk/html5/500/search/result?cityId=12&checkInDay=&checkOutDay=&locId=&keyword=&radius=5&cityAndLandmark=&offset=0&length=10&orderBy=recommend&leaseType=&minPrice=0&maxPrice=12980&distId=&huXing=&facilitys=&guestNum=&cashPledgeFree=0&label=&lodgeUnitTags=&userId=&sessId=&timestamp=1575528128156&is_supportWebP=true
+
+cityId: 12
+checkInDay: 
+checkOutDay: 
+locId: 
+keyword: 
+radius: 5
+cityAndLandmark: 
+offset: 0
+length: 10
+orderBy: recommend
+leaseType: 
+minPrice: 0
+maxPrice: 12980
+distId: 
+huXing: 
+facilitys: 
+guestNum: 
+cashPledgeFree: 0
+label: 
+lodgeUnitTags: 
+userId: 
+sessId: 
+timestamp: 1575528128156
+is_supportWebP: true
+
+
+https://wirelesspub.xiaozhu.com/app/xzfk/html5/500/Fangdong/index?landlordId=119752325301&offset=0&length=5&onlyLodgeunit=false&timestamp=1575528238794
+
+landlordId: 119752325301
+offset: 0
+length: 5
+onlyLodgeunit: false
+timestamp: 1575528238794
+
+首页背景图：
+https://image.xiaozhustatic2.com/00,600,950,1,80,2/s,3,6SPW,923,2000,2,5df460b6.jpg

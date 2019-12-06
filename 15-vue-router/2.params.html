@@ -28,14 +28,19 @@
             mounted(){
                 console.log(this.$route.params.id,this.$route.params.userid)
             },
-            watch:{
-                '$route':(to,from)=>{
-                    console.log(to,from)
-                }
-            },
-            // beforeRouteUpdate(to,from,next){
-            //     next()
-            // }
+            //监听路由变化，参数，旧版本
+            // watch:{
+            //     '$route':(to,from)=>{
+            //         // to:目标地址
+            //         // from:来源地址
+            //         console.log(to,from)
+            //     }
+            // },
+            //监听路由变化，新版本，导航守卫
+            beforeRouteUpdate(to,from,next){
+                console.log(to,from)
+                next()
+            }
         }
         const search = {
             template: `<div>search</div>`
@@ -44,10 +49,12 @@
             template: `<div> 404 not found</div>`
         }
         var routes = [
+            // 是一个数组，配置多个
             // 配置路径和组件,配置顺序：先匹配优先级高先生效，后匹配不生效
             {path: '/position/:id/user/:userid',component: position},
             {path: '/search',component: search},
             {path: '/search-*',component: search},
+            // 前面的匹配不上就是404
             {path:'*',component:notfound}
         ]
         var router = new VueRouter({

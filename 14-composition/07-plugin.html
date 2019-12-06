@@ -26,15 +26,18 @@
         }
         // 调用
         var myPlugin = {
+            //必须实现install方法
             install(vue){
                 vue.prototype.$cache= cache;
             }
         }
         Vue.use(myPlugin)
+
         var vm = new Vue({
             el:'#app',
             mounted(){
                 // debugger
+                //上面的方法，添加一趟localstorage
                 this.$cache.add('username','xiaoming')
             }
         })
