@@ -1,0 +1,149 @@
+{
+  "id": "1551157",
+  "name": "outsideCity",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6537288",
+      "name": "city_巴黎",
+      "font_class": "city_bali",
+      "unicode": "e7c0",
+      "unicode_decimal": 59328
+    },
+    {
+      "icon_id": "6537289",
+      "name": "city_奥克兰",
+      "font_class": "city_aokelan",
+      "unicode": "e7c1",
+      "unicode_decimal": 59329
+    },
+    {
+      "icon_id": "6537292",
+      "name": "city_巴厘岛",
+      "font_class": "city_balidao",
+      "unicode": "e7c2",
+      "unicode_decimal": 59330
+    },
+    {
+      "icon_id": "6537294",
+      "name": "city_芭提雅",
+      "font_class": "city_batiya",
+      "unicode": "e7c3",
+      "unicode_decimal": 59331
+    },
+    {
+      "icon_id": "6537295",
+      "name": "city_大阪",
+      "font_class": "city_daban",
+      "unicode": "e7c4",
+      "unicode_decimal": 59332
+    },
+    {
+      "icon_id": "6537296",
+      "name": "city_东京",
+      "font_class": "city_dongjing",
+      "unicode": "e7c5",
+      "unicode_decimal": 59333
+    },
+    {
+      "icon_id": "6537302",
+      "name": "city_吉隆坡",
+      "font_class": "city_jilongpo",
+      "unicode": "e7c6",
+      "unicode_decimal": 59334
+    },
+    {
+      "icon_id": "6537306",
+      "name": "city_济州岛",
+      "font_class": "city_jizhoudao",
+      "unicode": "e7c7",
+      "unicode_decimal": 59335
+    },
+    {
+      "icon_id": "6537307",
+      "name": "city_京都",
+      "font_class": "city_jingdu",
+      "unicode": "e7c8",
+      "unicode_decimal": 59336
+    },
+    {
+      "icon_id": "6537310",
+      "name": "city_洛杉矶",
+      "font_class": "city_luoshanji",
+      "unicode": "e7c9",
+      "unicode_decimal": 59337
+    },
+    {
+      "icon_id": "6537311",
+      "name": "city_曼谷",
+      "font_class": "city_mangu",
+      "unicode": "e7ca",
+      "unicode_decimal": 59338
+    },
+    {
+      "icon_id": "6537312",
+      "name": "city_墨尔本",
+      "font_class": "city_moerben",
+      "unicode": "e7cb",
+      "unicode_decimal": 59339
+    },
+    {
+      "icon_id": "6537314",
+      "name": "city_普吉岛",
+      "font_class": "city_pujidao",
+      "unicode": "e7cc",
+      "unicode_decimal": 59340
+    },
+    {
+      "icon_id": "6537321",
+      "name": "city_清迈",
+      "font_class": "city_qingmai",
+      "unicode": "e7cd",
+      "unicode_decimal": 59341
+    },
+    {
+      "icon_id": "6537324",
+      "name": "city_首尔",
+      "font_class": "city_shouer",
+      "unicode": "e7ce",
+      "unicode_decimal": 59342
+    },
+    {
+      "icon_id": "6537326",
+      "name": "city_苏梅岛",
+      "font_class": "city_sumeidao",
+      "unicode": "e7cf",
+      "unicode_decimal": 59343
+    },
+    {
+      "icon_id": "6537330",
+      "name": "city_悉尼",
+      "font_class": "city_xini",
+      "unicode": "e7d0",
+      "unicode_decimal": 59344
+    },
+    {
+      "icon_id": "6537331",
+      "name": "city_亚庇",
+      "font_class": "city_yabi",
+      "unicode": "e7d1",
+      "unicode_decimal": 59345
+    },
+    {
+      "icon_id": "6537336",
+      "name": "city_新加坡",
+      "font_class": "city_xinjiapo",
+      "unicode": "e7d2",
+      "unicode_decimal": 59346
+    },
+    {
+      "icon_id": "7119577",
+      "name": "city_釜山",
+      "font_class": "city_fushan",
+      "unicode": "e7f0",
+      "unicode_decimal": 59376
+    }
+  ]
+}

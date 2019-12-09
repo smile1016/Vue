@@ -16,6 +16,7 @@ export const comingList = (params)=>{
     return get(url,params)
 }
 export const getHotCities = (params)=>{
+    //请求本地数据
     let url = "/cities.json";
     return get(url,params)
 }

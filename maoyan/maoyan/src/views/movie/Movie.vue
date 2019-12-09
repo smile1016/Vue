@@ -4,7 +4,13 @@
 
     <div class="header">
       <router-link tag="div" class="city" to="/city">
-        <span>城市</span>
+        <!--方法一： 从store中获取城市名 -->
+        <!-- <span>{{$store.state.city.name}}</span> -->
+        <!-- 方法二：从getter中获取城市名 -->
+        <!-- <span>{{$store.getters.getCityName}}</span> -->
+        <!-- 方法三：利用mapGetters -->
+        <span>{{getCityName}}</span>
+
         <i></i>
       </router-link>
       <router-link active-class="active" tag="div" class="hotshow" to="/index/movie/hotshow">正在热映</router-link>
@@ -24,7 +30,7 @@
 
 <style lang="scss" scoped>
 $color: #ef4238;
-@import '../../assets/style/mixin.scss';
+@import "../../assets/style/mixin.scss";
 .movie-container {
   display: flex;
   flex-direction: column;
@@ -99,9 +105,13 @@ $color: #ef4238;
 
 <script>
 import DownloadApp from "@/components/DownloadApp.vue";
+import {mapGetters} from 'vuex'
 export default {
   components: {
     DownloadApp
+  },
+  computed:{
+    ...mapGetters(['getCityName'])
   }
 };
 </script>

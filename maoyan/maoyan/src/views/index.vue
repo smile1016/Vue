@@ -3,7 +3,12 @@
     <div class="header">
       <h1>猫眼电影</h1>
     </div>
-    <router-view class="main"></router-view>
+    <keep-alive>
+      <transition>
+        <router-view class="main"></router-view>
+      </transition>
+    </keep-alive>
+
     <ul class="footer">
       <router-link active-class="active" tag="li" to="/index/movie">
         <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
@@ -84,18 +89,17 @@
       span {
         color: #696969;
         font-size: 10px;
-        margin-top: 3px
+        margin-top: 3px;
       }
     }
     .active {
-    span {
-      color: #f03d37;
-    }
-    g {
-      fill: #f03d37;
+      span {
+        color: #f03d37;
+      }
+      g {
+        fill: #f03d37;
+      }
     }
   }
-  }
-  
 }
 </style>

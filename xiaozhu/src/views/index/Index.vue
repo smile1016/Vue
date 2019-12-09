@@ -28,7 +28,7 @@
         <div class="search_wrap">
           <div class="tabwrap">
             <div class="chosecity">
-              <router-link tag='span'  class="sp" to="/city?cityname=北京">北京</router-link>
+              <router-link tag='span'  class="sp" to="/city">北京</router-link>
               <!-- <span class="sp">北京</span> -->
               <span>
                 <i class="iconfont icon-position"></i> 我的位置

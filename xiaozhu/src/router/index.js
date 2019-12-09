@@ -3,26 +3,36 @@ import VueRouter from 'vue-router'
 import Index from '../views/index/Index.vue'
 import City from '../views/index/components/City.vue'
 import Date from '../views/index/components/Date.vue'
+
+import Inside from '../views/index/components/Inside.vue'
+import Outside from '../views/index/components/Outside.vue'
 Vue.use(VueRouter)
 
-const routes = [
-  {
+const routes = [{
     path: '/',
     name: 'index',
     component: Index,
-    children:[
-      
+    children: [
+
     ]
   },
   {
-    path:'/city',
-    component:City
+    path: '/city',
+    component: City,
+    redirect:'/city/inside',
+    children: [{
+      path: 'inside',
+      component: Inside
+    }, {
+      path: 'outside',
+      component: Outside
+    }]
   },
   {
-    path:'/calendarPage',
-    component:Date
+    path: '/calendarPage',
+    component: Date
   }
-  
+
 ]
 
 const router = new VueRouter({
