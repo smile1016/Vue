@@ -4,11 +4,14 @@ import Home from '../views/Home.vue'
 import User from '../views/user/User.vue'
 import Login from '../views/login/Login.vue'
 import Statics from '../views/statics/Statics.vue'
+
+import Counter from '../views/counter/Counter.vue'
 Vue.use(VueRouter)
 
 const routes = [{
     path: '',
-    redirect: '/login'
+    // redirect: '/login',
+    component:Counter
   },
   {
     path: '/home',
@@ -38,21 +41,20 @@ const routes = [{
 const router = new VueRouter({
   routes
 })
-router.beforeEach((to, from, next) => {
-  if(to.path ===  '/login'){
-    if(sessionStorage.getItem('username')){
-      router.push('/home')
-    }else{
-      next();
-    }
-    return;  
-  }
-  //加强版本：调用后端接口+token
-  if (sessionStorage.getItem('username')) {
-    next()
-  } else {
-    router.push('/login')
-
-  }
-})
+// router.beforeEach((to, from, next) => {
+//   if(to.path ===  '/login'){
+//     if(sessionStorage.getItem('username')){
+//       router.push('/home')
+//     }else{
+//       next();
+//     }
+//     return;  
+//   }
+//   //加强版本：调用后端接口+token
+//   if (sessionStorage.getItem('username')) {
+//     next()
+//   } else {
+//     router.push('/login')
+//   }
+// })
 export default router
