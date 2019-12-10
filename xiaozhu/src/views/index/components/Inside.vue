@@ -83,7 +83,6 @@ export default {
     async getInsideAllCity() {
       let rs = await insideAllCity();
       this.insideAllCity = rs.data;
-      console.log(this.insideAllCity);
     }
   }
 };

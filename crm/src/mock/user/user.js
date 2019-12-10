@@ -21,3 +21,11 @@ Mock.mock('/api/user/login', 'post', (options) => {
     }
    
 })
+
+Mock.mock('/api/user/logout',"get",()=>{
+    // 应该是删除session数据，清理cookie
+    return Mock.mock({
+        code:1,
+        message:'退出成功'
+    })
+})
