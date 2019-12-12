@@ -28,7 +28,7 @@
         <div class="search_wrap">
           <div class="tabwrap">
             <div class="chosecity">
-              <router-link tag='span'  class="sp" to="/city">北京</router-link>
+              <router-link tag='span'  class="sp" to="/city">{{getCityName}}</router-link>
               <!-- <span class="sp">北京</span> -->
               <span>
                 <i class="iconfont icon-position"></i> 我的位置
@@ -47,17 +47,17 @@
 </template>
 <script>
 import Download from "../../components/Download";
-import BScroll from "@better-scroll/core";
+import { mapGetters } from "vuex"
+// import BScroll from "@better-scroll/core";
 export default {
   components: {
     Download
   },
-  created() {
-    this.scroll = new BScroll("#scroll_wrap", {
-      click: true,
-      scrollX: true,
-      probeType: 3
-    });
+  created(){
+    document.title = '小猪短租'
+  },
+  computed: {
+    ...mapGetters(["getCityName"])
   }
 };
 </script>

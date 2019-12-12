@@ -2,7 +2,7 @@
   <div class="date-container">
     <div class="date-top">
       <div class="close">
-        <i @click="$router.push('/')" class="iconfont icon-close"></i>
+        <i @click="$router.go(-1)" class="iconfont icon-close"></i>
       </div>
       <p>选择入住离开日期</p>
       <DateMonth></DateMonth>

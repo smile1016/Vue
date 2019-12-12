@@ -27,3 +27,5 @@ export const outsideAllCity=(params)=>{
     return get(url,params)
 }
 
+
+

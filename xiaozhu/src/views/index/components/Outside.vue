@@ -4,16 +4,16 @@
     <span id="hot" class="search_T">热门城市</span>
     <div>
       <div class="search_ul">
-        <div data-v-2201177c v-for="city in outsideHotCity" :key="city.cityId" class="city_choose">
-          <i data-v-2201177c class="doticon iconfont" v-html="city.iconfont"></i>
+        <div v-for="city in outsideHotCity" :key="city.cityId" class="city_choose" @click="setCity({id:city.cityId,name:city.cityName})">
+          <i class="doticon iconfont" v-html="city.iconfont"></i>
           {{city.cityName}}
         </div>
       </div>
     </div>
     <!-- 所有城市 -->
-    <div data-v-5aafaf7a>
-      <div data-v-5aafaf7a v-for="items in outsideAllCity" :key="items.cityId">
-        <div data-v-19da5c8 class="cityname">{{items.cityName}}</div>
+    <div>
+      <div v-for="items in outsideAllCity" :key="items.cityId" @click="setCity({id:item.cityId,name:item.cityName})">
+        <div class="cityname">{{items.cityName}}</div>
       </div>
     </div>
   </div>
@@ -42,6 +42,10 @@ export default {
     async getoutsideAllCity() {
       let rs = await outsideAllCity();
       this.outsideAllCity = rs.data;
+    },
+    setCity(city){
+      this.$store.commit("UPDATE_CITY", city);
+      this.$router.push('/')
     }
   }
 };

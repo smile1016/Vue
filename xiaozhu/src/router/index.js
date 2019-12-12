@@ -8,6 +8,12 @@ import Inside from '../views/index/components/Inside.vue'
 import Outside from '../views/index/components/Outside.vue'
 
 import Result from '../views/resultlist/result.vue'
+import Search from '../views/resultlist/Search.vue'
+import LocationArea from '../views/resultlist/LocationArea.vue'
+import MoreSelect from '../views/resultlist/MoreSelect.vue'
+import RecommendSort from '../views/resultlist/RecommendSort.vue'
+
+import Detail from '../views/detail/Detail.vue'
 Vue.use(VueRouter)
 
 const routes = [{
@@ -36,8 +42,28 @@ const routes = [{
   },
   {
     path:'/result',
-    component:Result
-  }
+    component:Result,
+  },
+  {
+    path:'/result/search',
+    component:Search,
+  },
+  {
+    path:'/result/locationarea',
+    component:LocationArea
+  },
+  {
+    path:'/result/moreselect',
+    component:MoreSelect
+  },
+  {
+    path:'/result/recommendsort',
+    component:RecommendSort
+  },
+  {
+    path:'/detail',
+    component:Detail
+  },
 ]
 
 const router = new VueRouter({

@@ -1,1 +1,2 @@
-import'./user/user.js'
+import "./user/user"
+import "./statics/statics"

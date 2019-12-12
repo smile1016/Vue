@@ -5,18 +5,18 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    count:1
+    count: 1
   },
   mutations: {
-    updateCount(state,num){
-      state.count+=num;
+    updateCount(state, num) {
+      state.count += num;
     }
   },
   actions: {
-    updateCountAsync({commit},num){
-      setTimeout(()=>{
-        commit('updateCount',num)
-      },2000)
+    updateCountAsycn({ commit }, num) {
+      setTimeout(() => {
+        commit('updateCount', num)
+      }, 2000)
     }
   },
   modules: {

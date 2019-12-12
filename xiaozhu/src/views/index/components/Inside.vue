@@ -5,26 +5,26 @@
     <span id="hot" class="search_T">热门城市</span>
     <div>
       <div class="search_ul">
-        <div data-v-2201177c class="city_choose myLocation">
-          <i data-v-2201177c class="doticon iconfont">&#xe60d;</i>
+        <div class="city_choose myLocation">
+          <i class="doticon iconfont">&#xe60d;</i>
           我的附近
         </div>
-        <div data-v-2201177c v-for="city in insideHotCity" :key="city.cityId" class="city_choose">
-          <i data-v-2201177c class="doticon iconfont" v-html="city.iconfont"></i>
+        <div v-for="city in insideHotCity" :key="city.cityId" class="city_choose" @click="setCity({id:city.cityId,name:city.cityName})">
+          <i class="doticon iconfont" v-html="city.iconfont"></i>
           {{city.cityName}}
         </div>
       </div>
     </div>
     <!-- 所有城市 -->
-    <div data-v-5aafaf7a>
-      <div data-v-5aafaf7a v-for="(items,key,index) in insideAllCity" :key="index">
-        <h3 data-v-5aafaf7a id="A" class="city_title">{{key}}</h3>
+    <div>
+      <div v-for="(items,key,index) in insideAllCity" :key="index">
+        <h3 id="A" class="city_title">{{key}}</h3>
         <div
-          data-v-19da5c88
-          data-v-5aafaf7a
+         
           v-for="item in items"
           :key="item.id"
           class="cityname"
+          @click="setCity({id:item.cityId,name:item.cityName})"
         >{{item.cityName}}</div>
       </div>
     </div>
@@ -83,6 +83,10 @@ export default {
     async getInsideAllCity() {
       let rs = await insideAllCity();
       this.insideAllCity = rs.data;
+    },
+    setCity(city){
+      this.$store.commit("UPDATE_CITY", city);
+      this.$router.push('/')
     }
   }
 };

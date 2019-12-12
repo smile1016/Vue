@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .title{
+            width:120px;
+            line-height:30px;
+            border:1px solid #333;
+        }
+    </style>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    
+    <div id="app">
+        <collapse>
+            <template v-slot:aa>  // 会插入到插槽name为aa的位置
+                <collapse-item title="我的大学">大学同学</collapse-item>
+                <collapse-item title="我的高中">高中同学</collapse-item>
+                <collapse-item title="我的初中">初中同学</collapse-item>
+            </template>
+        </collapse>
+        <!--
+            <collapse>
+                <template #aa>  // 简写形式
+                    <collapse-item></collapse-item>
+                    <collapse-item></collapse-item>
+                    <collapse-item></collapse-item>
+                </template>
+            </collapse>
+        -->
+        <!-- 
+        <h2>没有插槽名的，默认插到默认插槽中</h2>
+        -->
+    </div>
+    <script>
+        Vue.component("collapse",{
+            methods: {
+                handelChange(childId) {
+                    // 父组件有个$children，是一个数组，里面是它所有的儿子
+                    this.$children.forEach(ele => {
+                        if(ele._uid != childId) {
+                            ele.show = false;
+                        }
+                    })
+                }
+            },
+            template: `
+                <div class="box">
+                    <slot name="aa"></slot>  // 插槽，collapse标签中的内容会插入此位置
+                    // <slot></slot>
+                </div>
+            `
+        });
+        Vue.component("collapse-item", {
+            props:['title'],
+            methods:{
+                change() {
+                    // 触发父亲的handelChange()方法 。
+                    // vue会把每个组件都赋予一个id，这里将子组件的_uid传给父组件
+                    this.$parent.handelChange(this._uid); 
+                    this.show = !this.show;
+                }
+            },
+            data() {
+                return {
+                    show:false	
+                }
+            },
+            template: `
+                <div>
+                    <div @click="change" class="title">{{title}}</div>
+                    <div v-show="show">
+                        <slot></slot>
+                    </div>
+                </div>
+            `
+        });
+        let vm = new Vue({
+            el: "#app"
+        });
+    </script>
+  
+</body>
+</html>

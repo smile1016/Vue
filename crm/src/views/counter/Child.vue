@@ -1,13 +1,14 @@
 <template>
-    <div>
-        <Grandson></Grandson>
-    </div>
+  <div>
+    <Granson/>
+  </div>
 </template>
 <script>
-import Grandson from './Grandson' 
+import Granson from "./Grandson"
 export default {
-    components:{
-        Grandson
-    }
+  components: {
+    Granson
+  }
 }
 </script>
+

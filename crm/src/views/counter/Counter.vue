@@ -1,23 +1,25 @@
 <template>
-    <div>
-        <Child></Child>
-        <button @click="handleClick">添加</button>
-        <button @click="handleClickAsync">add async</button>
-    </div>
+  <div>
+    <Child/>
+    <button @click="handleClick">add</button>
+    <button @click="handleClickAsync">async add </button>
+
+  </div>
 </template>
 <script>
-import Child from './Child' 
+import Child from "./Child"
 export default {
-    components:{
-        Child
+  components: {
+    Child
+  },
+  methods: {
+    handleClick() {
+      this.$store.commit("updateCount", 2)
     },
-    methods:{
-        handleClick(){
-            this.$store.commit('updateCount',2)
-        },
-        handleClickAsync(){
-            this.$store.dispatch('updateCountAsync',3)
-        }
+    handleClickAsync() {
+      this.$store.dispatch("updateCountAsycn", 3)
     }
+  }
 }
 </script>
+
