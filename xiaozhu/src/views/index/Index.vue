@@ -39,7 +39,7 @@
               <!-- <span class="sp">入住离开日期</span> -->
             </div>
           </div>
-          <div class="btn-search">查找房源</div>
+          <router-link tag='div' to="/result" class="btn-search">查找房源</router-link>
         </div>
       </div>
     </div>

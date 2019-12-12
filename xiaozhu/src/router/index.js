@@ -6,6 +6,8 @@ import Date from '../views/index/components/Date.vue'
 
 import Inside from '../views/index/components/Inside.vue'
 import Outside from '../views/index/components/Outside.vue'
+
+import Result from '../views/resultlist/result.vue'
 Vue.use(VueRouter)
 
 const routes = [{
@@ -31,8 +33,11 @@ const routes = [{
   {
     path: '/calendarPage',
     component: Date
+  },
+  {
+    path:'/result',
+    component:Result
   }
-
 ]
 
 const router = new VueRouter({
