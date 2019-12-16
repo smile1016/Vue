@@ -9,8 +9,13 @@ export default new Vuex.Store({
     showDownload: true,
     city:{
       id:12,
-      name:'北京'
-    }
+      name:'北京',
+    },
+   ids:{
+    luid:'',
+    landlordId:'',
+   },
+    keyword:''
   },
   mutations: {
     UPDATE_DOWN_STATE(state, option) {
@@ -18,7 +23,15 @@ export default new Vuex.Store({
     },
     UPDATE_CITY(state, city) {
       state.city = city;
-    }
+    },
+    UPDATE_KEYWORD(state, keyword) {
+      state.keyword = keyword;
+    },
+    UPDATE_IDS(state, ids) {
+      state.ids = ids;
+      
+    },
+    
   },
   getters: {
     getCityName(state) {

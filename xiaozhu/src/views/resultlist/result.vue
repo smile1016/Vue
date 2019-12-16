@@ -2,14 +2,14 @@
   <div class="result-container">
     <div class="better-top">
       <div class="result-top">
-        <i class="iconfont icon-zuojiantou" @click="$router.push('/')"></i>
+        <i class="iconfont icon-zuojiantou" @click="handleback()"></i>
         <h3>{{$store.state.city.name}}</h3>
         <i class="iconfont icon-caidan"></i>
       </div>
       <div class="result-head">
         <router-link tag="div" to="/result/search" class="search_box">
           <i class="iconfont icon-search"></i>
-          <input type="text" placeholder="位置/地名/房源" />
+          <input type="text" :placeholder="this.$store.state.keyword==='位置/地名/房源' ? '':this.$store.state.keyword" />
         </router-link>
         <div class="result_calendar_box">
           <router-link tag="div" to="/calendarPage" class="search_item">
@@ -21,7 +21,7 @@
       <div class="result_select">
         <ul class="search_condition">
           <router-link tag="li" to="/result/locationarea">
-            <span>位置区域</span>
+            <span v-html="this.$store.state.keyword==='' ? '位置区域':this.$store.state.keyword"></span>
             <i class="iconfont icon-xiajiantou"></i>
           </router-link>
           <router-link tag="li" to="/result/moreselect">
@@ -53,7 +53,12 @@ export default {
     document.title = this.$store.state.city.name;
   },
   // Indicator.open(); //加载loading
-  methods: {}
+  methods: {
+    handleback(){
+      this.$router.push('/');
+      this.$store.commit("UPDATE_KEYWORD", '');
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>

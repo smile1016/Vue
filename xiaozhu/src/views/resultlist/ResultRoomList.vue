@@ -1,7 +1,8 @@
 <template>
-  <div class="ResultRoomList-container" id="list-wrap" @click="$router.push('/detail')">
+  <div class="ResultRoomList-container" id="list-wrap" >
     <div>
-      <div class="carnival_item" v-for="(item,index) in this.RoomList" :key="index">
+      <div class="carnival_item" v-for="(item,index) in this.RoomList" @click="handleResult({luid:item.luId,
+    landlordId:item.landlordId})" :key="index">
         <div class="carnival_item_top">
           <img :src="item.luMainImageUrl" alt />
           <span class="iconfont icon-xihuan"></span>
@@ -91,7 +92,7 @@ export default {
       checkInDay: "",
       checkOutDay: "",
       locId: "",
-      keyword: "",
+      keyword: this.$store.state.keyword,
       radius: 5,
       cityAndLandmark: "",
       offset: 0,
@@ -114,9 +115,11 @@ export default {
     };
     let rs = await ResultRoomList(params);
     // debugger
+    // this.$store.commit("UPDATE_LUID", this.$refs.item.luid);
+    
     this.RoomList = rs.data.content.item;
+    console.log(this.RoomList)
     Indicator.close();
-    console.log(this.RoomList);
     this.$nextTick(() => {
         this.initScroll()
       })
@@ -128,6 +131,11 @@ export default {
         scrollX: true,
         probeType: 3
       });
+    },
+    handleResult(ids){
+      this.$router.push('/detail');
+      this.$commit(this.$store.commit("UPDATE_IDS", ids))
+     
     }
   }
 };

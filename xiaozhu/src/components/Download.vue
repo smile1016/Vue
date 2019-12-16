@@ -28,7 +28,7 @@ export default {
   justify-content: center;
   align-items: center;
   height: 36px;
-  background: url("https://m.xiaozhu.com/v_7c192/static/img/toappbg.1fa5b5c.jpg");
+  background: #fff;
   background-size: cover;
   padding: 12px 0;
   @include border_1px(#d8d8d8);
